@@ -113,6 +113,9 @@ public abstract class DataAccessObject {
             sql += set;
             sql += " WHERE";
             sql += getWhereClauseForOneEntry();
+            
+            System.out.println(sql);
+            
             dbConnection.executeSQL(sql);
             this.changed = false;
             dirty.clear();

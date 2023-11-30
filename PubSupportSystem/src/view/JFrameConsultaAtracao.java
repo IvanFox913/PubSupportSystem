@@ -1,14 +1,17 @@
 package view;
 
-import controller.ResultSetTableModel;
-import javax.swing.RowFilter;
-import java.sql.SQLException;
+import controller.LogTrack;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
+import controller.ResultSetTableModel;
+import java.awt.event.WindowEvent;
+import java.sql.SQLException;
+import javax.swing.RowFilter;
 import model.Atracao;
 
 public class JFrameConsultaAtracao extends javax.swing.JFrame {
 
+    private Atracao atracao;
     private boolean select;
     private boolean disconnectOnClose;
     
@@ -17,9 +20,10 @@ public class JFrameConsultaAtracao extends javax.swing.JFrame {
     private ResultSetTableModel result;
     private final TableRowSorter<TableModel> filter;
     
-    public JFrameConsultaAtracao(boolean select, boolean disconnectOnClose) throws SQLException{
+    public JFrameConsultaAtracao(boolean select, boolean disconnectOnClose, Atracao atracao) throws SQLException{
         initComponents();
         
+        this.atracao = atracao;
         this.select = select;
         jButtonSelecionar.setEnabled(this.select);
         
@@ -169,29 +173,24 @@ public class JFrameConsultaAtracao extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonFiltrarActionPerformed
 
     private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
-        System.out.println("Adicionar");
-        
-        try {
+    System.out.println("Adicionar");
+
+    JFrameAtracaoCRUD jFrameCRUD;
+    jFrameCRUD = new JFrameAtracaoCRUD(null, false);
             
-            JFrameAtracaoCRUD jFrameCRUD;
-            jFrameCRUD = new JFrameAtracaoCRUD(null, false);
-            
-            jFrameCRUD.addWindowListener(new java.awt.event.WindowAdapter(){
-                @Override
-                public void windowClosed(java.awt.event.WindowEvent evt){
-                    System.out.println("Atualizar");
-                    try {
-                        result.setQuery(query);
-                    } catch (Exception ex){
-                        ex.printStackTrace();
-                    }
+    jFrameCRUD.addWindowListener(new java.awt.event.WindowAdapter(){
+            @Override
+            public void windowClosed(java.awt.event.WindowEvent evt){
+                System.out.println("Atualizar");
+                try {
+                    result.setQuery(query);
+                } catch (Exception ex){
+                    ex.printStackTrace();
                 }
+            }
             });
             
-            jFrameCRUD.setVisible(true);
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
+        jFrameCRUD.setVisible(true);
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
     private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed
@@ -265,7 +264,7 @@ public class JFrameConsultaAtracao extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new JFrameConsultaAtracao(false, true).setVisible(true);
+                    new JFrameConsultaAtracao(false, true, null).setVisible(true);
                 } catch ( Exception ex ) {
                     ex.printStackTrace();
                 }

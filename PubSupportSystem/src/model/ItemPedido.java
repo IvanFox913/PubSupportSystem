@@ -1,12 +1,14 @@
 package model;
+import controller.DataAccessObject;
+import java.util.ArrayList;
 
-public class ItemPedido {
+public class ItemPedido  extends DataAccessObject {
     private int idProduto; //FK Produto idProduto;
     private int idNotaFiscal; //FK NotaFiscal idNotaFiscal;
     private int quantidade;
 
     public ItemPedido() {
-        //super("item_pedido");    
+        super("item_pedido");    
     }
 
     // GETTERS
@@ -35,6 +37,16 @@ public class ItemPedido {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    @Override
+    protected String getWhereClauseForOneEntry() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    protected void fill(ArrayList<Object> data) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
       
 }

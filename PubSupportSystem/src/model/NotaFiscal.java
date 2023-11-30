@@ -1,6 +1,8 @@
 package model;
+import controller.DataAccessObject;
+import java.util.ArrayList;
 
-public class NotaFiscal {
+public class NotaFiscal  extends DataAccessObject {
     
     private int idNotaFiscal;
     private double precoTotal;
@@ -10,7 +12,7 @@ public class NotaFiscal {
     private int idUsuario; //FK Usuario idUsuario
 
     public NotaFiscal() {
-        //super("nota_fiscal");
+        super("nota_fiscal");
     }
     
     // GETTERS
@@ -63,6 +65,16 @@ public class NotaFiscal {
 
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
+    }
+
+    @Override
+    protected String getWhereClauseForOneEntry() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    protected void fill(ArrayList<Object> data) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
