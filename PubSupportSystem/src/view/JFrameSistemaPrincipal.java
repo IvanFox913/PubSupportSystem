@@ -9,13 +9,21 @@ import java.io.File;
 import java.io.IOException;
 import javax.swing.Timer;
 import model.Usuario;
+import view.JFrameAtracaoCRUD;
+import view.JFrameAtracaoCRUD;
+import view.JFrameConsultaAtracao;
+import view.JFrameConsultaAtracao;
+import view.JFrameConsultaItemPedido;
+import view.JFrameConsultaItemPedido;
+import view.JFrameItemPedidoCRUD;
+import view.JFrameItemPedidoCRUD;
 
-public class JFrameSistema extends javax.swing.JFrame {
+public class JFrameSistemaPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form JFrameSistema
      */
-    public JFrameSistema() {
+    public JFrameSistemaPrincipal() {
         initComponents();
     }
 
@@ -35,10 +43,17 @@ public class JFrameSistema extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jMenuBarActions = new javax.swing.JMenuBar();
         jMenuAdministrativo = new javax.swing.JMenu();
+        jMenuItemCadastroUsuario = new javax.swing.JMenuItem();
+        jMenuItemCadastroTipoUsuario = new javax.swing.JMenuItem();
         jMenuItemCadastroItemPedido = new javax.swing.JMenuItem();
-        jMenuItemConsultaItemPedido = new javax.swing.JMenuItem();
         jMenuItemCadastroAtracao = new javax.swing.JMenuItem();
+        jMenuItemCadastroTipoProduto = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItemConsultaUsuario = new javax.swing.JMenuItem();
+        jMenuItemConsultaTipoUsuario = new javax.swing.JMenuItem();
+        jMenuItemConsultaItemPedido = new javax.swing.JMenuItem();
         jMenuItemConsultaAtracao = new javax.swing.JMenuItem();
+        jMenuItemConsultaTipoProduto = new javax.swing.JMenuItem();
         jMenuAtendimento = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,9 +88,8 @@ public class JFrameSistema extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -94,6 +108,22 @@ public class JFrameSistema extends javax.swing.JFrame {
 
         jMenuAdministrativo.setText("Administrativo");
 
+        jMenuItemCadastroUsuario.setText("Cadastro Usuario");
+        jMenuItemCadastroUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadastroUsuarioActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemCadastroUsuario);
+
+        jMenuItemCadastroTipoUsuario.setText("Cadastro Tipo Usuario");
+        jMenuItemCadastroTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadastroTipoUsuarioActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemCadastroTipoUsuario);
+
         jMenuItemCadastroItemPedido.setText("Cadastro Item Pedido");
         jMenuItemCadastroItemPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,14 +131,6 @@ public class JFrameSistema extends javax.swing.JFrame {
             }
         });
         jMenuAdministrativo.add(jMenuItemCadastroItemPedido);
-
-        jMenuItemConsultaItemPedido.setText("Consulta Item Pedido");
-        jMenuItemConsultaItemPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemConsultaItemPedidoActionPerformed(evt);
-            }
-        });
-        jMenuAdministrativo.add(jMenuItemConsultaItemPedido);
 
         jMenuItemCadastroAtracao.setText("Cadastro Atração");
         jMenuItemCadastroAtracao.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +140,39 @@ public class JFrameSistema extends javax.swing.JFrame {
         });
         jMenuAdministrativo.add(jMenuItemCadastroAtracao);
 
+        jMenuItemCadastroTipoProduto.setText("Cadastro Tipo Produto");
+        jMenuItemCadastroTipoProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadastroTipoProdutoActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemCadastroTipoProduto);
+        jMenuAdministrativo.add(jSeparator1);
+
+        jMenuItemConsultaUsuario.setText("Consulta Usuario");
+        jMenuItemConsultaUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaUsuarioActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemConsultaUsuario);
+
+        jMenuItemConsultaTipoUsuario.setText("Consulta Tipo Usuario");
+        jMenuItemConsultaTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaTipoUsuarioActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemConsultaTipoUsuario);
+
+        jMenuItemConsultaItemPedido.setText("Consulta Item Pedido");
+        jMenuItemConsultaItemPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaItemPedidoActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemConsultaItemPedido);
+
         jMenuItemConsultaAtracao.setText("Consulta Atração");
         jMenuItemConsultaAtracao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +180,9 @@ public class JFrameSistema extends javax.swing.JFrame {
             }
         });
         jMenuAdministrativo.add(jMenuItemConsultaAtracao);
+
+        jMenuItemConsultaTipoProduto.setText("Consulta Tipo Produto");
+        jMenuAdministrativo.add(jMenuItemConsultaTipoProduto);
 
         jMenuBarActions.add(jMenuAdministrativo);
 
@@ -181,6 +239,56 @@ public class JFrameSistema extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItemConsultaAtracaoActionPerformed
 
+    private void jMenuItemCadastroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroUsuarioActionPerformed
+        try {
+            JFrameUsuarioCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameUsuarioCRUD( null, true );
+            jFrameCRUD.setVisible(true);
+        } catch( Exception ex ){
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItemCadastroUsuarioActionPerformed
+
+    private void jMenuItemCadastroTipoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroTipoProdutoActionPerformed
+        try {
+            JFrameTipoProdutoCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameTipoProdutoCRUD( null, true );
+            jFrameCRUD.setVisible(true);
+        } catch( Exception ex ){
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItemCadastroTipoProdutoActionPerformed
+
+    private void jMenuItemConsultaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaUsuarioActionPerformed
+        try {
+            //JFrameConsultaUsuario jFrameConsulta;
+            //jFrameConsulta = new JFrameConsultaUsuario( false, true, null );
+            //jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItemConsultaUsuarioActionPerformed
+
+    private void jMenuItemCadastroTipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroTipoUsuarioActionPerformed
+        try {
+            JFrameTipoUsuarioCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameTipoUsuarioCRUD( null, true );
+            jFrameCRUD.setVisible(true);
+        } catch( Exception ex ){
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItemCadastroTipoUsuarioActionPerformed
+
+    private void jMenuItemConsultaTipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaTipoUsuarioActionPerformed
+        try {
+            JFrameConsultaTipoUsuario jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaTipoUsuario( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItemConsultaTipoUsuarioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -198,14 +306,22 @@ public class JFrameSistema extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrameSistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrameSistemaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrameSistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrameSistemaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrameSistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrameSistemaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrameSistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrameSistemaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new JFrameSistema().setVisible(true);
+//            }
+//        });
         //</editor-fold>
 
 //        /* Create and display the form */
@@ -226,8 +342,15 @@ public class JFrameSistema extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBarActions;
     private javax.swing.JMenuItem jMenuItemCadastroAtracao;
     private javax.swing.JMenuItem jMenuItemCadastroItemPedido;
+    private javax.swing.JMenuItem jMenuItemCadastroTipoProduto;
+    private javax.swing.JMenuItem jMenuItemCadastroTipoUsuario;
+    private javax.swing.JMenuItem jMenuItemCadastroUsuario;
     private javax.swing.JMenuItem jMenuItemConsultaAtracao;
     private javax.swing.JMenuItem jMenuItemConsultaItemPedido;
+    private javax.swing.JMenuItem jMenuItemConsultaTipoProduto;
+    private javax.swing.JMenuItem jMenuItemConsultaTipoUsuario;
+    private javax.swing.JMenuItem jMenuItemConsultaUsuario;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

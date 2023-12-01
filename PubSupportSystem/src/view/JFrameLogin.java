@@ -14,19 +14,19 @@ import model.Usuario;
  *
  * @author saradu
  */
-public class JFramePrincipal extends javax.swing.JFrame {
+public class JFrameLogin extends javax.swing.JFrame {
     private Usuario usuario;
     
     //barrinha
     private Timer tiempo;
     int contador;
-    int segundos = 30;
+    int segundos = 20;
     
     /**
      * Creates new form JFramePrincipal
      */
     
-    public JFramePrincipal() {
+    public JFrameLogin() {
         initComponents();
         
         logout();
@@ -84,7 +84,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
             if (contador == 100) {
                 tiempo.stop();
                 if (jProgressBarProgresso.getValue() == 100) {
-                    JFrameSistema sis = new JFrameSistema();
+                    JFrameSistemaPrincipal sis = new JFrameSistemaPrincipal();
                     sis.setVisible(true);
                     dispose();
                 }
@@ -241,7 +241,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFramePrincipal().setVisible(true);
+                new JFrameLogin().setVisible(true);
             }
         });
     }
