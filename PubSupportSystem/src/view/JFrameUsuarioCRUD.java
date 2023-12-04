@@ -133,6 +133,11 @@ public class JFrameUsuarioCRUD extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Usuários");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanelCadastro.setBorder(javax.swing.BorderFactory.createTitledBorder("Cadastro Usuario"));
 
@@ -378,6 +383,17 @@ public class JFrameUsuarioCRUD extends javax.swing.JFrame {
             tipoUsuario = null;
         }
     }//GEN-LAST:event_jButtonSelecionarTipoUsuarioActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        if( this.disconnectOnClose ) {
+            System.out.println("Desconectar.");
+            try {
+                usuario.disconnectFromDatabase();
+            } catch ( Exception ex ) {
+                ex.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments

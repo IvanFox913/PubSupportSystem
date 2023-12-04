@@ -55,6 +55,11 @@ public class JFrameConsultaItemPedido extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Consulta Item Pedido");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jTableConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -196,8 +201,8 @@ public class JFrameConsultaItemPedido extends javax.swing.JFrame {
     private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
         System.out.println("Adicionar");
 
-        JFrameAtracaoCRUD jFrameCRUD;
-        jFrameCRUD = new JFrameAtracaoCRUD(null, false);
+        JFrameItemPedidoCRUD jFrameCRUD;
+        jFrameCRUD = new JFrameItemPedidoCRUD(null, false);
 
         jFrameCRUD.addWindowListener(new java.awt.event.WindowAdapter(){
             @Override
@@ -217,6 +222,13 @@ public class JFrameConsultaItemPedido extends javax.swing.JFrame {
     private void jTextFieldFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFiltroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldFiltroActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        if( this.disconnectOnClose ) {
+            System.out.println("Desconectar.");
+            result.disconnectFromDatabase();
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments

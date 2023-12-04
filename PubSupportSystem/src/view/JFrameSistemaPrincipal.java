@@ -55,6 +55,8 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jMenuItemConsultaAtracao = new javax.swing.JMenuItem();
         jMenuItemConsultaTipoProduto = new javax.swing.JMenuItem();
         jMenuAtendimento = new javax.swing.JMenu();
+        jMenuUsuario = new javax.swing.JMenu();
+        jMenuItemUsuarioSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema - La Delicia");
@@ -182,12 +184,29 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jMenuAdministrativo.add(jMenuItemConsultaAtracao);
 
         jMenuItemConsultaTipoProduto.setText("Consulta Tipo Produto");
+        jMenuItemConsultaTipoProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaTipoProdutoActionPerformed(evt);
+            }
+        });
         jMenuAdministrativo.add(jMenuItemConsultaTipoProduto);
 
         jMenuBarActions.add(jMenuAdministrativo);
 
         jMenuAtendimento.setText("Atendimento");
         jMenuBarActions.add(jMenuAtendimento);
+
+        jMenuUsuario.setText("Usuario");
+
+        jMenuItemUsuarioSair.setText("Sair");
+        jMenuItemUsuarioSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemUsuarioSairActionPerformed(evt);
+            }
+        });
+        jMenuUsuario.add(jMenuItemUsuarioSair);
+
+        jMenuBarActions.add(jMenuUsuario);
 
         setJMenuBar(jMenuBarActions);
 
@@ -261,9 +280,9 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemConsultaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaUsuarioActionPerformed
         try {
-            //JFrameConsultaUsuario jFrameConsulta;
-            //jFrameConsulta = new JFrameConsultaUsuario( false, true, null );
-            //jFrameConsulta.setVisible(true);
+            JFrameConsultaUsuario jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaUsuario( false, true, null );
+            jFrameConsulta.setVisible(true);
         } catch( Exception ex ){
             ex.printStackTrace();
         }
@@ -289,6 +308,22 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItemConsultaTipoUsuarioActionPerformed
 
+    private void jMenuItemUsuarioSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUsuarioSairActionPerformed
+        //logout();
+    }//GEN-LAST:event_jMenuItemUsuarioSairActionPerformed
+
+    private void jMenuItemConsultaTipoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaTipoProdutoActionPerformed
+        try {
+            JFrameConsultaTipoProduto jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaTipoProduto( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItemConsultaTipoProdutoActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -350,6 +385,8 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemConsultaTipoProduto;
     private javax.swing.JMenuItem jMenuItemConsultaTipoUsuario;
     private javax.swing.JMenuItem jMenuItemConsultaUsuario;
+    private javax.swing.JMenuItem jMenuItemUsuarioSair;
+    private javax.swing.JMenu jMenuUsuario;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables

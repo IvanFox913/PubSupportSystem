@@ -9,7 +9,7 @@ public class Produto  extends DataAccessObject  {
     private String nomeProduto;
     private double preco;
     private double desconto;
-    private int idTipoProduto; //FK TipoProduto idTipoProduto
+    private TipoProduto tipoProduto; //FK TipoProduto idTipoProduto
 
     public Produto() {
         super("produto");
@@ -33,9 +33,10 @@ public class Produto  extends DataAccessObject  {
         return desconto;
     }
 
-    public int getIdtipoProduto() {
-        return idTipoProduto;
+    public TipoProduto getTipoProduto() {
+        return tipoProduto;
     }
+    
     
     // SETTERS
 
@@ -55,18 +56,51 @@ public class Produto  extends DataAccessObject  {
         this.desconto = desconto;
     }
 
-    public void setIdTipoProduto(int idTipoProduto) {
-        this.idTipoProduto = idTipoProduto;
+    public void setTipoProduto(TipoProduto tipoProduto) throws Exception{
+            if(this.tipoProduto  == null ){
+                
+                if( tipoProduto != null ){
+                    this.tipoProduto = new TipoProduto();
+                    this.tipoProduto.setIdTipoProduto(tipoProduto.getIdTipoProduto());
+                    this.tipoProduto.load();
+                    addChange("id_tipo_produto", this.tipoProduto.getIdTipoProduto());   
+                }    
+            }else{
+                if(tipoProduto == null){
+                    this.tipoProduto = null;
+                    addChange( "id_tipo_produto", null );
+                }else{
+                    
+                    if(!this.tipoProduto.equals( tipoProduto)){
+                        this.tipoProduto.setIdTipoProduto( tipoProduto.getIdTipoProduto() );
+                        this.tipoProduto.load();
+                        addChange( "id_tipo_produto", this.tipoProduto.getIdTipoProduto() );
+                    }  
+                }
+            } 
     }
 
     @Override
     protected String getWhereClauseForOneEntry() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return " id_produto = " + idProduto;        
     }
 
     @Override
     protected void fill(ArrayList<Object> data) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       
+        idProduto = (int) data.get(0);
+        nomeProduto = (String) data.get(1);
+        preco = (Double) data.get(2);
+        desconto = (Double) data.get(3);
+        
+        if(data.get(4) != null){
+            if(tipoProduto == null){
+                tipoProduto = new TipoProduto();
+            }
+            
+            tipoProduto.setIdTipoProduto((int) data.get(4));
+            tipoProduto.load();
+        }
     }
 
 }

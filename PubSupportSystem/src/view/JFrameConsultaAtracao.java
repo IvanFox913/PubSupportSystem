@@ -114,6 +114,11 @@ public class JFrameConsultaAtracao extends javax.swing.JFrame {
         });
 
         jButtonSelecionar.setText("Selecionar");
+        jButtonSelecionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSelecionarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -173,24 +178,24 @@ public class JFrameConsultaAtracao extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonFiltrarActionPerformed
 
     private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
-    System.out.println("Adicionar");
+        System.out.println("Adicionar");
 
-    JFrameAtracaoCRUD jFrameCRUD;
-    jFrameCRUD = new JFrameAtracaoCRUD(null, false);
-            
-    jFrameCRUD.addWindowListener(new java.awt.event.WindowAdapter(){
-            @Override
-            public void windowClosed(java.awt.event.WindowEvent evt){
-                System.out.println("Atualizar");
-                try {
-                    result.setQuery(query);
-                } catch (Exception ex){
-                    ex.printStackTrace();
+        JFrameAtracaoCRUD jFrameCRUD;
+        jFrameCRUD = new JFrameAtracaoCRUD(null, false);
+
+        jFrameCRUD.addWindowListener(new java.awt.event.WindowAdapter(){
+                @Override
+                public void windowClosed(java.awt.event.WindowEvent evt){
+                    System.out.println("Atualizar");
+                    try {
+                        result.setQuery(query);
+                    } catch (Exception ex){
+                        ex.printStackTrace();
+                    }
                 }
-            }
-            });
-            
-        jFrameCRUD.setVisible(true);
+                });
+
+            jFrameCRUD.setVisible(true);
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
     private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed
@@ -235,6 +240,26 @@ public class JFrameConsultaAtracao extends javax.swing.JFrame {
             result.disconnectFromDatabase();
         }
     }//GEN-LAST:event_formWindowClosing
+
+    private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
+            
+            System.out.println("Selecionar");
+            
+            int codigo = (int) result.getValueAt( row, 0 );
+            
+            this.atracao.setIdAtracao(codigo);
+            
+            try {
+                this.atracao.load();
+                this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+            } catch( Exception ex ) {
+                ex.printStackTrace();
+            }
+            
+        }
+    }//GEN-LAST:event_jButtonSelecionarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
