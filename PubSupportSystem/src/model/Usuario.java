@@ -179,7 +179,7 @@ public class Usuario extends DataAccessObject{
                 tipoUsuario = new TipoUsuario();
             }
             
-            tipoUsuario.setIdTipoUsuario((int) data.get(17));
+            tipoUsuario.setIdTipoUsuario((int) data.get(7));
             tipoUsuario.load();
         }
         

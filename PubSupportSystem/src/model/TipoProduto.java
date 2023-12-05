@@ -24,21 +24,30 @@ public class TipoProduto  extends DataAccessObject  {
     // SETTERS
     
     public void setIdTipoProduto(int idTipoProduto) {
-        this.idTipoProduto = idTipoProduto;
+        if( idTipoProduto !=  this.idTipoProduto ) {
+            this.idTipoProduto = idTipoProduto;
+            // informar que um campo da tabela foi alterado
+            addChange("id_tipo_produto", this.idTipoProduto);
+        }
     }
 
     public void setNomeTipo(String nomeTipo) {
-        this.nomeTipo = nomeTipo;
+        if( !nomeTipo.equals( this.nomeTipo ) ) {
+            this.nomeTipo = nomeTipo;
+             addChange("nome_tipo", 
+                    this.nomeTipo);
+        }
     }
 
     @Override
     protected String getWhereClauseForOneEntry() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return " id_tipo_produto = " + idTipoProduto;     
     }
 
     @Override
     protected void fill(ArrayList<Object> data) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.idTipoProduto = (int) data.get(0);
+        nomeTipo = (String) data.get(1);
     }
     
     

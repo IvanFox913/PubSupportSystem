@@ -41,19 +41,34 @@ public class Produto  extends DataAccessObject  {
     // SETTERS
 
     public void setIdproduto(int idProduto) {
-        this.idProduto = idProduto;
+        if( this.idProduto !=  idProduto ) {
+            this.idProduto = idProduto;
+            // informar que um campo da tabela foi alterado
+            addChange("id_produto", 
+                    this.idProduto);
+        }
     }
 
     public void setNomeProduto(String nomeProduto) {
-        this.nomeProduto = nomeProduto;
+        if( !nomeProduto.equals( this.nomeProduto ) ) {
+            this.nomeProduto = nomeProduto;
+             addChange("nome_produto", 
+                    this.nomeProduto);
+        }
     }
 
     public void setPreco(double preco) {
-        this.preco = preco;
+        if( preco != this.preco ) {
+            this.preco = preco;
+            addChange("preco", this.preco);
+        }
     }
 
     public void setDesconto(double desconto) {
-        this.desconto = desconto;
+        if( desconto != this.desconto ) {
+            this.desconto = desconto;
+            addChange("desconto", this.desconto);
+        }
     }
 
     public void setTipoProduto(TipoProduto tipoProduto) throws Exception{

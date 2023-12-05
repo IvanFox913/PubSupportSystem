@@ -31,6 +31,7 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelTitulo = new javax.swing.JPanel();
+        jLabelTitulo = new javax.swing.JLabel();
         jPanelCadastroProduto = new javax.swing.JPanel();
         jLabelProdutoID = new javax.swing.JLabel();
         jLabelNomeProduto = new javax.swing.JLabel();
@@ -40,8 +41,8 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
         jTextFieldNomeProduto = new javax.swing.JTextField();
         jTextFieldPrecoProduto = new javax.swing.JTextField();
         jTextFieldDescontoProduto = new javax.swing.JTextField();
-        jLabelTipoProdutoID = new javax.swing.JLabel();
-        jTextFieldTipoProdutoID = new javax.swing.JTextField();
+        jLabelTipoProduto = new javax.swing.JLabel();
+        jTextFieldTipoProduto = new javax.swing.JTextField();
         jButtonSelecionarTipoProduto = new javax.swing.JButton();
         jButtonExcluirTipoProduto = new javax.swing.JButton();
         jButtonSalvar = new javax.swing.JButton();
@@ -58,15 +59,26 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
 
         jPanelTitulo.setBackground(new java.awt.Color(102, 102, 102));
 
+        jLabelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/produtos.png"))); // NOI18N
+        jLabelTitulo.setText("Novo produto");
+
         javax.swing.GroupLayout jPanelTituloLayout = new javax.swing.GroupLayout(jPanelTitulo);
         jPanelTitulo.setLayout(jPanelTituloLayout);
         jPanelTituloLayout.setHorizontalGroup(
             jPanelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanelTituloLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanelTituloLayout.setVerticalGroup(
             jPanelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTituloLayout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(jLabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanelCadastroProduto.setBorder(javax.swing.BorderFactory.createTitledBorder("Cadastro novo produto"));
@@ -120,7 +132,7 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        jLabelTipoProdutoID.setText("ID Tipo Produto:");
+        jLabelTipoProduto.setText("ID Tipo Produto:");
 
         jButtonSelecionarTipoProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/search-icon.png"))); // NOI18N
         jButtonSelecionarTipoProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -163,9 +175,9 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanelCadastroProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabelTipoProdutoID)
+                                .addComponent(jLabelTipoProduto)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextFieldTipoProdutoID, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldTipoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
@@ -186,8 +198,8 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
                 .addComponent(jPanelCadastroProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelTipoProdutoID)
-                    .addComponent(jTextFieldTipoProdutoID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelTipoProduto)
+                    .addComponent(jTextFieldTipoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonSelecionarTipoProduto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -231,8 +243,8 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
         if( jTextFieldPrecoProduto.getText().isEmpty() ) {
             throw new Exception("O valor do produto precisa ser informado.");
         } else {
-            if( !jTextFieldPrecoProduto.getText().matches("\\d+\\.\\d{1,2}") ) {
-                throw new Exception("O valor do produto deve estar no formato 'XXXXXXXX.X' ou 'XXXXXXXX.XX'.");
+            if( !jTextFieldPrecoProduto.getText().matches("\\d+") ) {
+                throw new Exception("O valor do produto deve conter apenas numeros.");
             }            
         }        
         
@@ -249,12 +261,12 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
         }        
     }
 
-    private void dataDown() {
+    private void dataDown() throws Exception {
         produto.setIdproduto(Integer.parseInt(jTextFieldProdutoID.getText()));
         produto.setNomeProduto(jTextFieldNomeProduto.getText());
         produto.setPreco(Double.parseDouble(jTextFieldPrecoProduto.getText()));
         produto.setDesconto(Double.parseDouble(jTextFieldDescontoProduto.getText()));
-    
+        produto.setTipoProduto(tipoProduto);
     }
     
     private void dataUp() {
@@ -262,6 +274,10 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
         jTextFieldNomeProduto.setText( produto.getNomeProduto() );
         jTextFieldPrecoProduto.setText( String.valueOf( produto.getPreco() ) );
         jTextFieldDescontoProduto.setText( String.valueOf( produto.getDesconto() ) );        
+        
+        if( produto.getTipoProduto().getNomeTipo() != null ) {
+            jTextFieldTipoProduto.setText( produto.getTipoProduto().getNomeTipo() );
+        }    
     }    
     
     
@@ -279,7 +295,7 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
                 @Override
                 public void windowClosed(java.awt.event.WindowEvent evt) {
                     if( tipoProduto.getNomeTipo() != null ) {
-                        jTextFieldTipoProdutoID.setText( tipoProduto.getNomeTipo() );
+                        jTextFieldTipoProduto.setText( tipoProduto.getNomeTipo() );
                     }
                 }
             } );
@@ -293,7 +309,7 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
 
     private void jButtonExcluirTipoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirTipoProdutoActionPerformed
         tipoProduto = null;
-        jTextFieldTipoProdutoID.setText( null );
+        jTextFieldTipoProduto.setText( null );
     }//GEN-LAST:event_jButtonExcluirTipoProdutoActionPerformed
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
@@ -315,13 +331,48 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
         try {
             checkInput();
             dataDown();
-            this.produto.delete();
+            produto.delete();
             this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
         } catch(Exception ex) {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButtonExcluirActionPerformed
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(JFrameUsuarioCRUD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(JFrameUsuarioCRUD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(JFrameUsuarioCRUD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(JFrameUsuarioCRUD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    new JFrameProdutoCRUD( null, true ).setVisible(true);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonExcluir;
@@ -332,14 +383,15 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNomeProduto;
     private javax.swing.JLabel jLabelPrecoProduto;
     private javax.swing.JLabel jLabelProdutoID;
-    private javax.swing.JLabel jLabelTipoProdutoID;
+    private javax.swing.JLabel jLabelTipoProduto;
+    private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanelCadastroProduto;
     private javax.swing.JPanel jPanelTitulo;
     private javax.swing.JTextField jTextFieldDescontoProduto;
     private javax.swing.JTextField jTextFieldNomeProduto;
     private javax.swing.JTextField jTextFieldPrecoProduto;
     private javax.swing.JTextField jTextFieldProdutoID;
-    private javax.swing.JTextField jTextFieldTipoProdutoID;
+    private javax.swing.JTextField jTextFieldTipoProduto;
     // End of variables declaration//GEN-END:variables
 
 

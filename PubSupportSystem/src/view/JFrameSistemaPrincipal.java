@@ -48,12 +48,14 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jMenuItemCadastroItemPedido = new javax.swing.JMenuItem();
         jMenuItemCadastroAtracao = new javax.swing.JMenuItem();
         jMenuItemCadastroTipoProduto = new javax.swing.JMenuItem();
+        jMenuItemCadastroProduto = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItemConsultaUsuario = new javax.swing.JMenuItem();
         jMenuItemConsultaTipoUsuario = new javax.swing.JMenuItem();
         jMenuItemConsultaItemPedido = new javax.swing.JMenuItem();
         jMenuItemConsultaAtracao = new javax.swing.JMenuItem();
         jMenuItemConsultaTipoProduto = new javax.swing.JMenuItem();
+        jMenuItemConsultaProdutos = new javax.swing.JMenuItem();
         jMenuAtendimento = new javax.swing.JMenu();
         jMenuUsuario = new javax.swing.JMenu();
         jMenuItemUsuarioSair = new javax.swing.JMenuItem();
@@ -149,6 +151,14 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuAdministrativo.add(jMenuItemCadastroTipoProduto);
+
+        jMenuItemCadastroProduto.setText("Cadastro Produto");
+        jMenuItemCadastroProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadastroProdutoActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemCadastroProduto);
         jMenuAdministrativo.add(jSeparator1);
 
         jMenuItemConsultaUsuario.setText("Consulta Usuario");
@@ -190,6 +200,14 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuAdministrativo.add(jMenuItemConsultaTipoProduto);
+
+        jMenuItemConsultaProdutos.setText("Consulta Produto");
+        jMenuItemConsultaProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaProdutosActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemConsultaProdutos);
 
         jMenuBarActions.add(jMenuAdministrativo);
 
@@ -322,6 +340,26 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItemConsultaTipoProdutoActionPerformed
 
+    private void jMenuItemCadastroProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroProdutoActionPerformed
+        try {
+            JFrameProdutoCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameProdutoCRUD( null, true );
+            jFrameCRUD.setVisible(true);
+        } catch( Exception ex ){
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItemCadastroProdutoActionPerformed
+
+    private void jMenuItemConsultaProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaProdutosActionPerformed
+        try {
+            JFrameConsultaProduto jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaProduto( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jMenuItemConsultaProdutosActionPerformed
+
     
     
     /**
@@ -377,11 +415,13 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBarActions;
     private javax.swing.JMenuItem jMenuItemCadastroAtracao;
     private javax.swing.JMenuItem jMenuItemCadastroItemPedido;
+    private javax.swing.JMenuItem jMenuItemCadastroProduto;
     private javax.swing.JMenuItem jMenuItemCadastroTipoProduto;
     private javax.swing.JMenuItem jMenuItemCadastroTipoUsuario;
     private javax.swing.JMenuItem jMenuItemCadastroUsuario;
     private javax.swing.JMenuItem jMenuItemConsultaAtracao;
     private javax.swing.JMenuItem jMenuItemConsultaItemPedido;
+    private javax.swing.JMenuItem jMenuItemConsultaProdutos;
     private javax.swing.JMenuItem jMenuItemConsultaTipoProduto;
     private javax.swing.JMenuItem jMenuItemConsultaTipoUsuario;
     private javax.swing.JMenuItem jMenuItemConsultaUsuario;

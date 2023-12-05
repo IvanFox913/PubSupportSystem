@@ -28,25 +28,42 @@ public class ItemPedido  extends DataAccessObject {
     // SETTERS
     
     public void setIdProduto(int idProduto) {
-        this.idProduto = idProduto;
+        if( this.idProduto !=  idProduto ) {
+            this.idProduto = idProduto;
+            // informar que um campo da tabela foi alterado
+            addChange("id_produto", 
+                    this.idProduto);
+        }
     }
 
     public void setIdNotaFiscal(int idNotaFiscal) {
-        this.idNotaFiscal = idNotaFiscal;
+        if( this.idNotaFiscal !=  idNotaFiscal ) {
+            this.idNotaFiscal = idNotaFiscal;
+            // informar que um campo da tabela foi alterado
+            addChange("id_nota_fiscal", 
+                    this.idNotaFiscal);
+        }
     }
 
     public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+        if( this.quantidade !=  quantidade ) {
+            this.quantidade = quantidade;
+            // informar que um campo da tabela foi alterado
+            addChange("quantidade", 
+                    this.quantidade);
+        }
     }
 
     @Override
     protected String getWhereClauseForOneEntry() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return " id_produto = " + this.idProduto;
     }
 
     @Override
     protected void fill(ArrayList<Object> data) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.idProduto = (int) data.get(0);
+        this.idNotaFiscal = (int) data.get(1);
+        this.quantidade = (int) data.get(2);        
     }
       
 }
