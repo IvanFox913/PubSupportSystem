@@ -162,6 +162,7 @@ public class Usuario extends DataAccessObject{
     @Override
     protected void fill(ArrayList<Object> data) throws Exception{
         
+        //idUsuario = (data.get(0) instanceof Integer) ? (int) data.get(0) : Integer.parseInt(data.get(0).toString());
         idUsuario = (int) data.get(0);
         nome = (String) data.get(1);
         sobrenome = (String) data.get(2);
@@ -173,16 +174,31 @@ public class Usuario extends DataAccessObject{
         cpf = (String) data.get(4);
         senha = (String) data.get(5);
         telefone = (String) data.get(6);
+        devedor = (String) data.get(7);
         
-        if(data.get(7) != null){
+        if(data.get(8) != null){
             if(tipoUsuario == null){
                 tipoUsuario = new TipoUsuario();
             }
             
-            tipoUsuario.setIdTipoUsuario((int) data.get(7));
+            tipoUsuario.setIdTipoUsuario((int) data.get(8));
             tipoUsuario.load();
         }
         
+    }
+
+    @Override
+    public boolean equals(Object obj) {        
+        if( obj instanceof Usuario ) {
+           
+           Usuario aux;
+           aux = (Usuario) obj;
+            
+           if( idUsuario == aux.getIdUsuario() ) {
+               return true;
+           }             
+        }        
+        return false;
     }
     
 }

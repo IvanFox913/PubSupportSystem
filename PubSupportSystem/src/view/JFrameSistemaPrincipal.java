@@ -19,14 +19,53 @@ import view.JFrameItemPedidoCRUD;
 import view.JFrameItemPedidoCRUD;
 
 public class JFrameSistemaPrincipal extends javax.swing.JFrame {
-
+    private Usuario usuario;
+    
     /**
      * Creates new form JFrameSistema
      */
     public JFrameSistemaPrincipal() {
         initComponents();
+        logout();
     }
-
+    
+    private void logout() {
+        
+        usuario = new Usuario();
+        jTextFieldUsuario.setText("");
+        jPasswordFieldSenha.setText("");
+        jLabelDelicia.setVisible(false);
+        jMenuAdministrativo.setEnabled(false);
+        jMenuAtendimento.setEnabled(false);
+        jMenuUsuario.setEnabled(false);
+        jPanelLogin.setVisible(true);
+        
+    }
+    
+    private void login() {
+        
+       
+        jTextFieldUsuario.setText("");
+        jPasswordFieldSenha.setText("");
+        jLabelBemvindo.setEnabled(true);
+        jLabelBemvindo.setText("Bem-vindo/a, " + usuario.getNome() + "!");
+        jLabelDelicia.setVisible(true);
+                
+        jPanelLogin.setVisible(false);
+        
+        if( usuario.getTipoUsuario().getModuloAdministrativo().equals("S") ) {
+            jMenuAdministrativo.setEnabled(true);
+        }
+        
+        if( usuario.getTipoUsuario().getModuloFuncionario().equals("S") ) {
+            jMenuAtendimento.setEnabled(true);
+        }
+        
+        jMenuUsuario.setEnabled(true);
+        
+               
+    }       
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,10 +76,20 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabelDelicia = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jPanelMenu = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabelBemvindo = new javax.swing.JLabel();
+        jPanelLogin = new javax.swing.JPanel();
+        jLabelUsuario = new javax.swing.JLabel();
+        jLabelSenha = new javax.swing.JLabel();
+        jTextFieldUsuario = new javax.swing.JTextField();
+        jPasswordFieldSenha = new javax.swing.JPasswordField();
+        jPanel4 = new javax.swing.JPanel();
+        jLabelIniciarSessao = new javax.swing.JLabel();
+        jButtonLogin = new javax.swing.JButton();
+        jButtonSair = new javax.swing.JButton();
         jMenuBarActions = new javax.swing.JMenuBar();
         jMenuAdministrativo = new javax.swing.JMenu();
         jMenuItemCadastroUsuario = new javax.swing.JMenuItem();
@@ -57,6 +106,12 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jMenuItemConsultaTipoProduto = new javax.swing.JMenuItem();
         jMenuItemConsultaProdutos = new javax.swing.JMenuItem();
         jMenuAtendimento = new javax.swing.JMenu();
+        jMenuItemConsultaUsuario1 = new javax.swing.JMenuItem();
+        jMenuItemConsultaTipoUsuario1 = new javax.swing.JMenuItem();
+        jMenuItemConsultaItemPedido1 = new javax.swing.JMenuItem();
+        jMenuItemConsultaTipoProduto1 = new javax.swing.JMenuItem();
+        jMenuItemConsultaAtracao1 = new javax.swing.JMenuItem();
+        jMenuItemConsultaProdutos1 = new javax.swing.JMenuItem();
         jMenuUsuario = new javax.swing.JMenu();
         jMenuItemUsuarioSair = new javax.swing.JMenuItem();
 
@@ -69,9 +124,9 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jLabelDelicia.setText("La Delicia");
         jLabelDelicia.setFocusable(false);
         jLabelDelicia.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        getContentPane().add(jLabelDelicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 500, 90));
+        getContentPane().add(jLabelDelicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 370, 90));
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanelMenu.setBackground(new java.awt.Color(102, 102, 102));
 
         jButton1.setText("Pratos");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,31 +139,113 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
 
         jButton3.setText("jButton3");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
+        jLabelBemvindo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelBemvindo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelBemvindo.setText("Bem-vindo!");
+        jLabelBemvindo.setEnabled(false);
+
+        javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
+        jPanelMenu.setLayout(jPanelMenuLayout);
+        jPanelMenuLayout.setHorizontalGroup(
+            jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMenuLayout.createSequentialGroup()
+                .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelMenuLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)))
+                    .addGroup(jPanelMenuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabelBemvindo)))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(226, 226, 226)
+        jPanelMenuLayout.setVerticalGroup(
+            jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelBemvindo)
+                .addGap(204, 204, 204)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addContainerGap(294, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 680));
+        getContentPane().add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 680));
+
+        jPanelLogin.setBackground(new java.awt.Color(153, 153, 153));
+        jPanelLogin.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelUsuario.setText("Usuário:");
+        jPanelLogin.add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+
+        jLabelSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelSenha.setText("Senha:");
+        jPanelLogin.add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+
+        jTextFieldUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldUsuario.setBorder(null);
+        jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldUsuarioActionPerformed(evt);
+            }
+        });
+        jPanelLogin.add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 250, 35));
+
+        jPasswordFieldSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPasswordFieldSenha.setBorder(null);
+        jPanelLogin.add(jPasswordFieldSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 250, 35));
+
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabelIniciarSessao.setFont(new java.awt.Font("Tw Cen MT", 3, 36)); // NOI18N
+        jLabelIniciarSessao.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelIniciarSessao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelIniciarSessao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iniciar.png"))); // NOI18N
+        jLabelIniciarSessao.setText("Iniciar Sessão");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabelIniciarSessao, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabelIniciarSessao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+        );
+
+        jPanelLogin.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 110));
+
+        jButtonLogin.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonLogin.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jButtonLogin.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonLogin.setText("Login");
+        jButtonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLoginActionPerformed(evt);
+            }
+        });
+        jPanelLogin.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 250, 35));
+
+        jButtonSair.setBackground(new java.awt.Color(204, 0, 0));
+        jButtonSair.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jButtonSair.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSair.setText("Sair");
+        jButtonSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSairActionPerformed(evt);
+            }
+        });
+        jPanelLogin.add(jButtonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 250, 35));
+
+        getContentPane().add(jPanelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 310, 410));
 
         jMenuAdministrativo.setText("Administrativo");
 
@@ -212,6 +349,55 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jMenuBarActions.add(jMenuAdministrativo);
 
         jMenuAtendimento.setText("Atendimento");
+
+        jMenuItemConsultaUsuario1.setText("Consulta Usuario");
+        jMenuItemConsultaUsuario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaUsuario1ActionPerformed(evt);
+            }
+        });
+        jMenuAtendimento.add(jMenuItemConsultaUsuario1);
+
+        jMenuItemConsultaTipoUsuario1.setText("Consulta Tipo Usuario");
+        jMenuItemConsultaTipoUsuario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaTipoUsuario1ActionPerformed(evt);
+            }
+        });
+        jMenuAtendimento.add(jMenuItemConsultaTipoUsuario1);
+
+        jMenuItemConsultaItemPedido1.setText("Consulta Item Pedido");
+        jMenuItemConsultaItemPedido1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaItemPedido1ActionPerformed(evt);
+            }
+        });
+        jMenuAtendimento.add(jMenuItemConsultaItemPedido1);
+
+        jMenuItemConsultaTipoProduto1.setText("Consulta Tipo Produto");
+        jMenuItemConsultaTipoProduto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaTipoProduto1ActionPerformed(evt);
+            }
+        });
+        jMenuAtendimento.add(jMenuItemConsultaTipoProduto1);
+
+        jMenuItemConsultaAtracao1.setText("Consulta Atração");
+        jMenuItemConsultaAtracao1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaAtracao1ActionPerformed(evt);
+            }
+        });
+        jMenuAtendimento.add(jMenuItemConsultaAtracao1);
+
+        jMenuItemConsultaProdutos1.setText("Consulta Produto");
+        jMenuItemConsultaProdutos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaProdutos1ActionPerformed(evt);
+            }
+        });
+        jMenuAtendimento.add(jMenuItemConsultaProdutos1);
+
         jMenuBarActions.add(jMenuAtendimento);
 
         jMenuUsuario.setText("Usuario");
@@ -233,7 +419,6 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItemCadastroItemPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroItemPedidoActionPerformed
@@ -327,7 +512,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemConsultaTipoUsuarioActionPerformed
 
     private void jMenuItemUsuarioSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUsuarioSairActionPerformed
-        //logout();
+        logout();
     }//GEN-LAST:event_jMenuItemUsuarioSairActionPerformed
 
     private void jMenuItemConsultaTipoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaTipoProdutoActionPerformed
@@ -360,6 +545,68 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItemConsultaProdutosActionPerformed
 
+    private void jTextFieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioActionPerformed
+
+    }//GEN-LAST:event_jTextFieldUsuarioActionPerformed
+
+    private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginActionPerformed
+
+        //login();
+        
+        try {
+            
+            usuario.setIdUsuario( Integer.parseInt( jTextFieldUsuario.getText() ) );
+            usuario.load();
+            
+            Usuario usLogin = new Usuario();
+            
+            usLogin.setIdUsuario( Integer.parseInt( jTextFieldUsuario.getText() ) );
+            usLogin.setSenha( jPasswordFieldSenha.getText() );
+            
+            if( usuario.getSenha().equals( usLogin.getSenha() ) ) {
+                login();
+                usuario.disconnectFromDatabase();
+            } else {
+                jTextFieldUsuario.setText("");
+                jPasswordFieldSenha.setText("");  
+                throw new Exception("Senha Inválida!");              
+            }
+            
+        
+        } catch(Exception ex) {
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+         
+    }//GEN-LAST:event_jButtonLoginActionPerformed
+
+    private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButtonSairActionPerformed
+
+    private void jMenuItemConsultaUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaUsuario1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemConsultaUsuario1ActionPerformed
+
+    private void jMenuItemConsultaTipoUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaTipoUsuario1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemConsultaTipoUsuario1ActionPerformed
+
+    private void jMenuItemConsultaItemPedido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaItemPedido1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemConsultaItemPedido1ActionPerformed
+
+    private void jMenuItemConsultaTipoProduto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaTipoProduto1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemConsultaTipoProduto1ActionPerformed
+
+    private void jMenuItemConsultaAtracao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaAtracao1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemConsultaAtracao1ActionPerformed
+
+    private void jMenuItemConsultaProdutos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaProdutos1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemConsultaProdutos1ActionPerformed
+
     
     
     /**
@@ -389,12 +636,12 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new JFrameSistema().setVisible(true);
-//            }
-//        });
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new JFrameSistemaPrincipal().setVisible(true);
+            }
+        });
         //</editor-fold>
 
 //        /* Create and display the form */
@@ -409,7 +656,13 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonLogin;
+    private javax.swing.JButton jButtonSair;
+    private javax.swing.JLabel jLabelBemvindo;
     private javax.swing.JLabel jLabelDelicia;
+    private javax.swing.JLabel jLabelIniciarSessao;
+    private javax.swing.JLabel jLabelSenha;
+    private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JMenu jMenuAdministrativo;
     private javax.swing.JMenu jMenuAtendimento;
     private javax.swing.JMenuBar jMenuBarActions;
@@ -420,14 +673,24 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemCadastroTipoUsuario;
     private javax.swing.JMenuItem jMenuItemCadastroUsuario;
     private javax.swing.JMenuItem jMenuItemConsultaAtracao;
+    private javax.swing.JMenuItem jMenuItemConsultaAtracao1;
     private javax.swing.JMenuItem jMenuItemConsultaItemPedido;
+    private javax.swing.JMenuItem jMenuItemConsultaItemPedido1;
     private javax.swing.JMenuItem jMenuItemConsultaProdutos;
+    private javax.swing.JMenuItem jMenuItemConsultaProdutos1;
     private javax.swing.JMenuItem jMenuItemConsultaTipoProduto;
+    private javax.swing.JMenuItem jMenuItemConsultaTipoProduto1;
     private javax.swing.JMenuItem jMenuItemConsultaTipoUsuario;
+    private javax.swing.JMenuItem jMenuItemConsultaTipoUsuario1;
     private javax.swing.JMenuItem jMenuItemConsultaUsuario;
+    private javax.swing.JMenuItem jMenuItemConsultaUsuario1;
     private javax.swing.JMenuItem jMenuItemUsuarioSair;
     private javax.swing.JMenu jMenuUsuario;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanelLogin;
+    private javax.swing.JPanel jPanelMenu;
+    private javax.swing.JPasswordField jPasswordFieldSenha;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }

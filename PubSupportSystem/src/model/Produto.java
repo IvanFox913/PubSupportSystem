@@ -41,7 +41,7 @@ public class Produto  extends DataAccessObject  {
     // SETTERS
 
     public void setIdproduto(int idProduto) {
-        if( this.idProduto !=  idProduto ) {
+        if( idProduto !=  this.idProduto ) {
             this.idProduto = idProduto;
             // informar que um campo da tabela foi alterado
             addChange("id_produto", 
@@ -106,7 +106,10 @@ public class Produto  extends DataAccessObject  {
         idProduto = (int) data.get(0);
         nomeProduto = (String) data.get(1);
         preco = (Double) data.get(2);
-        desconto = (Double) data.get(3);
+        //desconto = (Double) data.get(3);
+        if(data.get(3) != null){
+            desconto = (double) data.get(3);
+        }
         
         if(data.get(4) != null){
             if(tipoProduto == null){

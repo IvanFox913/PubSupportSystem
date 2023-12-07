@@ -11,7 +11,7 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
     private TipoProduto tipoProduto;
     private boolean disconnectOnClose;
     
-    public JFrameProdutoCRUD(Produto produto, boolean disconnectOnClose) {
+    public JFrameProdutoCRUD(Produto produto, boolean disconnectOnClose) throws Exception {
         initComponents();
         
         if(produto == null){
@@ -22,8 +22,14 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
             if(this.produto.getTipoProduto() != null){
                 this.tipoProduto = new TipoProduto();
                 this.tipoProduto.setIdTipoProduto(this.produto.getTipoProduto().getIdTipoProduto());
-            }
+                this.tipoProduto.load();
+            }   
+            dataUp();
+            jTextFieldProdutoID.setEnabled(false);
         }
+        
+        this.disconnectOnClose = disconnectOnClose;
+        
     }
 
     @SuppressWarnings("unchecked")
