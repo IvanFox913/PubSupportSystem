@@ -1,13 +1,5 @@
 <log>
-                                                                
-    
-    
-    
-    
-    
-    
-    
-    
+                                
     
     
     
@@ -59,15 +51,7 @@
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)&#13;
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)&#13;
 </exception>
-                                                                
-    
-    
-    
-    
-    
-    
-    
-    
+                                
     
     
     
@@ -119,15 +103,7 @@
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)&#13;
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)&#13;
 </exception>
-                                                                
-    
-    
-    
-    
-    
-    
-    
-    
+                                
     
     
     
@@ -179,7 +155,7 @@
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)&#13;
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)&#13;
 </exception>
-                                                                
+                                
     
     
     
@@ -187,688 +163,40 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Wed Dec 06 23:23:11 BRT 2023">java.lang.NumberFormatException: For input string: ""&#13;
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)&#13;
-	at java.base/java.lang.Integer.parseInt(Integer.java:662)&#13;
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)&#13;
-	at view.JFrameLogin.jButtonLoginActionPerformed(JFrameLogin.java:212)&#13;
-	at view.JFrameLogin.access$400(JFrameLogin.java:18)&#13;
-	at view.JFrameLogin$3.actionPerformed(JFrameLogin.java:157)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 06:30:45 BRT 2023">java.lang.Exception: Informe ID.&#13;
+	at view.JFrameNotaFiscalCRUD.checkInput(JFrameNotaFiscalCRUD.java:110)&#13;
+	at view.JFrameNotaFiscalCRUD.jButtonSalvarActionPerformed(JFrameNotaFiscalCRUD.java:479)&#13;
+	at view.JFrameNotaFiscalCRUD.access$400(JFrameNotaFiscalCRUD.java:13)&#13;
+	at view.JFrameNotaFiscalCRUD$5.actionPerformed(JFrameNotaFiscalCRUD.java:279)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Wed Dec 06 23:24:35 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameLogin.jButtonLoginActionPerformed(JFrameLogin.java:225)&#13;
-	at view.JFrameLogin.access$400(JFrameLogin.java:18)&#13;
-	at view.JFrameLogin$3.actionPerformed(JFrameLogin.java:157)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Wed Dec 06 23:24:44 BRT 2023">java.lang.NullPointerException&#13;
-	at view.JFrameLogin.login(JFrameLogin.java:62)&#13;
-	at view.JFrameLogin.jButtonLoginActionPerformed(JFrameLogin.java:222)&#13;
-	at view.JFrameLogin.access$400(JFrameLogin.java:18)&#13;
-	at view.JFrameLogin$3.actionPerformed(JFrameLogin.java:157)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Wed Dec 06 23:25:10 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameLogin.jButtonLoginActionPerformed(JFrameLogin.java:225)&#13;
-	at view.JFrameLogin.access$400(JFrameLogin.java:18)&#13;
-	at view.JFrameLogin$3.actionPerformed(JFrameLogin.java:157)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Wed Dec 06 23:25:20 BRT 2023">java.lang.NullPointerException&#13;
-	at view.JFrameLogin.login(JFrameLogin.java:62)&#13;
-	at view.JFrameLogin.jButtonLoginActionPerformed(JFrameLogin.java:222)&#13;
-	at view.JFrameLogin.access$400(JFrameLogin.java:18)&#13;
-	at view.JFrameLogin$3.actionPerformed(JFrameLogin.java:157)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Wed Dec 06 23:25:48 BRT 2023">java.lang.NullPointerException&#13;
-	at view.JFrameLogin.login(JFrameLogin.java:62)&#13;
-	at view.JFrameLogin.jButtonLoginActionPerformed(JFrameLogin.java:222)&#13;
-	at view.JFrameLogin.access$400(JFrameLogin.java:18)&#13;
-	at view.JFrameLogin$3.actionPerformed(JFrameLogin.java:157)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:27:48 BRT 2023">java.lang.NumberFormatException: For input string: ""&#13;
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)&#13;
-	at java.base/java.lang.Integer.parseInt(Integer.java:662)&#13;
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:535)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:27:55 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:548)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:28:00 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:548)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:29:02 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:548)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:31:23 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:548)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:37:56 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:547)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:46:54 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:546)&#13;
-	at view.JFrameSistemaPrincipal.access$500(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:245)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
@@ -883,87 +211,46 @@
     
     
     
-    
-    <exception time="Thu Dec 07 08:51:01 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:546)&#13;
-	at view.JFrameSistemaPrincipal.access$500(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:245)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 06:30:51 BRT 2023">java.sql.SQLException: Field 'preco_total' doesn't have a default value&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)&#13;
+	at controller.DataBaseConnection.executeSQL(DataBaseConnection.java:81)&#13;
+	at controller.DataAccessObject.insert(DataAccessObject.java:72)&#13;
+	at controller.DataAccessObject.save(DataAccessObject.java:167)&#13;
+	at view.JFrameNotaFiscalCRUD.jButtonSalvarActionPerformed(JFrameNotaFiscalCRUD.java:481)&#13;
+	at view.JFrameNotaFiscalCRUD.access$400(JFrameNotaFiscalCRUD.java:13)&#13;
+	at view.JFrameNotaFiscalCRUD$5.actionPerformed(JFrameNotaFiscalCRUD.java:279)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                                
-    
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:51:15 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:546)&#13;
-	at view.JFrameSistemaPrincipal.access$500(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:245)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
@@ -978,85 +265,46 @@
     
     
     
-    <exception time="Thu Dec 07 08:52:25 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:546)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:245)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 06:41:07 BRT 2023">java.sql.SQLException: Field 'preco_total' doesn't have a default value&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)&#13;
+	at controller.DataBaseConnection.executeSQL(DataBaseConnection.java:81)&#13;
+	at controller.DataAccessObject.insert(DataAccessObject.java:72)&#13;
+	at controller.DataAccessObject.save(DataAccessObject.java:167)&#13;
+	at view.JFrameNotaFiscalCRUD.jButtonSalvarActionPerformed(JFrameNotaFiscalCRUD.java:481)&#13;
+	at view.JFrameNotaFiscalCRUD.access$400(JFrameNotaFiscalCRUD.java:13)&#13;
+	at view.JFrameNotaFiscalCRUD$5.actionPerformed(JFrameNotaFiscalCRUD.java:279)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                            
-    
-    
-    
-    
-    
-    <exception time="Thu Dec 07 08:52:31 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:546)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:245)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
@@ -1070,39 +318,46 @@
     
     
     
-    <exception time="Thu Dec 07 08:55:34 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:547)&#13;
-	at view.JFrameSistemaPrincipal.access$200(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 06:42:27 BRT 2023">java.sql.SQLException: Field 'preco_total' doesn't have a default value&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)&#13;
+	at controller.DataBaseConnection.executeSQL(DataBaseConnection.java:81)&#13;
+	at controller.DataAccessObject.insert(DataAccessObject.java:72)&#13;
+	at controller.DataAccessObject.save(DataAccessObject.java:167)&#13;
+	at view.JFrameNotaFiscalCRUD.jButtonSalvarActionPerformed(JFrameNotaFiscalCRUD.java:482)&#13;
+	at view.JFrameNotaFiscalCRUD.access$400(JFrameNotaFiscalCRUD.java:13)&#13;
+	at view.JFrameNotaFiscalCRUD$5.actionPerformed(JFrameNotaFiscalCRUD.java:280)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
@@ -1115,83 +370,46 @@
     
     
     
-    <exception time="Thu Dec 07 08:57:22 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:549)&#13;
-	at view.JFrameSistemaPrincipal.access$200(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 06:46:22 BRT 2023">java.sql.SQLException: Field 'preco_total' doesn't have a default value&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)&#13;
+	at controller.DataBaseConnection.executeSQL(DataBaseConnection.java:81)&#13;
+	at controller.DataAccessObject.insert(DataAccessObject.java:72)&#13;
+	at controller.DataAccessObject.save(DataAccessObject.java:167)&#13;
+	at view.JFrameNotaFiscalCRUD.jButtonSalvarActionPerformed(JFrameNotaFiscalCRUD.java:482)&#13;
+	at view.JFrameNotaFiscalCRUD.access$400(JFrameNotaFiscalCRUD.java:13)&#13;
+	at view.JFrameNotaFiscalCRUD$5.actionPerformed(JFrameNotaFiscalCRUD.java:280)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                    
-    
-    
-    
-    <exception time="Thu Dec 07 08:57:28 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:549)&#13;
-	at view.JFrameSistemaPrincipal.access$200(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
@@ -1203,82 +421,43 @@
     
     
     
-    <exception time="Thu Dec 07 08:58:34 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:549)&#13;
-	at view.JFrameSistemaPrincipal.access$200(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 06:50:30 BRT 2023">java.lang.NumberFormatException: empty String&#13;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)&#13;
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)&#13;
+	at java.base/java.lang.Double.parseDouble(Double.java:651)&#13;
+	at view.JFrameNotaFiscalCRUD.dataDown(JFrameNotaFiscalCRUD.java:101)&#13;
+	at view.JFrameNotaFiscalCRUD.jButtonSalvarActionPerformed(JFrameNotaFiscalCRUD.java:486)&#13;
+	at view.JFrameNotaFiscalCRUD.access$400(JFrameNotaFiscalCRUD.java:13)&#13;
+	at view.JFrameNotaFiscalCRUD$5.actionPerformed(JFrameNotaFiscalCRUD.java:285)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-                
-    
-    
-    <exception time="Thu Dec 07 08:58:40 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:549)&#13;
-	at view.JFrameSistemaPrincipal.access$200(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
@@ -1289,81 +468,40 @@
             
     
     
-    <exception time="Thu Dec 07 09:00:18 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:549)&#13;
-	at view.JFrameSistemaPrincipal.access$200(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 07:05:56 BRT 2023">java.lang.Exception: Informe Data.&#13;
+	at view.JFrameNotaFiscalCRUD.checkInput(JFrameNotaFiscalCRUD.java:118)&#13;
+	at view.JFrameNotaFiscalCRUD.jButtonSalvarActionPerformed(JFrameNotaFiscalCRUD.java:479)&#13;
+	at view.JFrameNotaFiscalCRUD.access$400(JFrameNotaFiscalCRUD.java:13)&#13;
+	at view.JFrameNotaFiscalCRUD$5.actionPerformed(JFrameNotaFiscalCRUD.java:279)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)&#13;
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)&#13;
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
-</exception>
-            
-    
-    <exception time="Thu Dec 07 09:00:25 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:549)&#13;
-	at view.JFrameSistemaPrincipal.access$200(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
@@ -1373,39 +511,46 @@
 </exception>
         
     
-    <exception time="Thu Dec 07 09:02:46 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:549)&#13;
-	at view.JFrameSistemaPrincipal.access$200(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:246)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 14:15:13 BRT 2023">java.sql.SQLSyntaxErrorException: Unknown column 'produto_nome' in 'order clause'&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:71)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:20)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:15)&#13;
+	at view.JFrameConsultaProduto.&lt;init&gt;(JFrameConsultaProduto.java:33)&#13;
+	at view.JFrameItemPedidoCRUD.jButtonSelecionarProdutoActionPerformed(JFrameItemPedidoCRUD.java:318)&#13;
+	at view.JFrameItemPedidoCRUD.access$600(JFrameItemPedidoCRUD.java:10)&#13;
+	at view.JFrameItemPedidoCRUD$7.actionPerformed(JFrameItemPedidoCRUD.java:168)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
@@ -1414,39 +559,46 @@
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)&#13;
 </exception>
     
-    <exception time="Thu Dec 07 09:27:26 BRT 2023">java.lang.Exception: Senha Inválida!&#13;
-	at view.JFrameSistemaPrincipal.jButtonLoginActionPerformed(JFrameSistemaPrincipal.java:551)&#13;
-	at view.JFrameSistemaPrincipal.access$400(JFrameSistemaPrincipal.java:21)&#13;
-	at view.JFrameSistemaPrincipal$3.actionPerformed(JFrameSistemaPrincipal.java:260)&#13;
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)&#13;
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)&#13;
+    <exception time="Thu Dec 07 14:21:52 BRT 2023">java.sql.SQLSyntaxErrorException: Unknown column 'produto_nome' in 'order clause'&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)&#13;
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)&#13;
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)&#13;
+	at controller.DataBaseConnection.executeQuery(DataBaseConnection.java:71)&#13;
+	at controller.ResultSetTableModel.setQuery(ResultSetTableModel.java:20)&#13;
+	at controller.ResultSetTableModel.&lt;init&gt;(ResultSetTableModel.java:15)&#13;
+	at view.JFrameConsultaProduto.&lt;init&gt;(JFrameConsultaProduto.java:33)&#13;
+	at view.JFrameItemPedidoCRUD.jButtonSelecionarProdutoActionPerformed(JFrameItemPedidoCRUD.java:319)&#13;
+	at view.JFrameItemPedidoCRUD.access$600(JFrameItemPedidoCRUD.java:10)&#13;
+	at view.JFrameItemPedidoCRUD$7.actionPerformed(JFrameItemPedidoCRUD.java:169)&#13;
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)&#13;
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)&#13;
 	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)&#13;
 	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)&#13;
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)&#13;
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)&#13;
-	at java.desktop/java.awt.Component.processEvent(Component.java:6400)&#13;
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)&#13;
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)&#13;
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)&#13;
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)&#13;
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)&#13;
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)&#13;
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)&#13;
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6616)&#13;
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)&#13;
+	at java.desktop/java.awt.Component.processEvent(Component.java:6381)&#13;
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)&#13;
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4991)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)&#13;
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)&#13;
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)&#13;
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)&#13;
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4823)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)&#13;
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)&#13;
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)&#13;
 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)&#13;
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)&#13;
-	at java.base/java.security.AccessController.doPrivileged(Native Method)&#13;
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)&#13;
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)&#13;
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)&#13;
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)&#13;
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)&#13;
