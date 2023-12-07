@@ -1,12 +1,10 @@
-
 package view;
+
 
 import controller.LogTrack;
 import controller.ResultSetTableModel;
 import java.awt.event.WindowEvent;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.RowFilter;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -18,17 +16,17 @@ public class JFrameConsultaProduto extends javax.swing.JFrame {
     private boolean select;
     private boolean disconnectOnClose;
     
-    private String query = "SELECT PRODUTO.ID_PRODUTO AS ID, PRODUTO.NOME_PRODUTO AS PRODUTO, PRODUTO.PRECO AS PREÇO, PRODUTO.DESCONTO, TIPO_PRODUTO.NOME_TIPO AS TIPO_PRODUTO FROM PRODUTO JOIN TIPO_PRODUTO ON PRODUTO.ID_TIPO_PRODUTO = TIPO_PRODUTO.ID_TIPO_PRODUTO ORDER BY ID_PRODUTO";  
+    private String query = "SELECT * FROM produto ORDER BY produto_nome;";
     
     private ResultSetTableModel result;
-    private final TableRowSorter< TableModel > filter;
+    private final TableRowSorter<TableModel> filter;
     
     public JFrameConsultaProduto(boolean select, boolean disconnectOnClose, Produto produto) throws SQLException {
         initComponents();
         
-        this.produto = produto;        
+        this.produto = produto;
         this.select = select;
-        jButtonSelecionar.setEnabled( this.select );
+        jButtonSelecionar.setEnabled(this.select);
         
         this.disconnectOnClose = disconnectOnClose;
         
@@ -36,7 +34,7 @@ public class JFrameConsultaProduto extends javax.swing.JFrame {
         jTableConsulta.setModel( result );
         
         filter = new TableRowSorter< TableModel >( result );
-        jTableConsulta.setRowSorter( filter ); 
+        jTableConsulta.setRowSorter( filter );     
     }
 
     /**
@@ -50,21 +48,15 @@ public class JFrameConsultaProduto extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableConsulta = new javax.swing.JTable();
-        jLabelFiltro = new javax.swing.JLabel();
-        jTextFieldFiltro = new javax.swing.JTextField();
-        jButtonFiltrar = new javax.swing.JButton();
-        jButtonSelecionar = new javax.swing.JButton();
-        jButtonAlterar = new javax.swing.JButton();
         jButtonAdicionar = new javax.swing.JButton();
+        jButtonAlterar = new javax.swing.JButton();
+        jButtonSelecionar = new javax.swing.JButton();
+        jButtonFiltrar = new javax.swing.JButton();
+        jTextFieldFiltro = new javax.swing.JTextField();
+        jLabelFiltro = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Consulta de Produtos");
-        setResizable(false);
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowClosing(java.awt.event.WindowEvent evt) {
-                formWindowClosing(evt);
-            }
-        });
+        setTitle("Consulta Produtos");
 
         jTableConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -79,25 +71,10 @@ public class JFrameConsultaProduto extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTableConsulta);
 
-        jLabelFiltro.setText("Filtro:");
-
-        jTextFieldFiltro.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAdicionar.setText("Adicionar");
+        jButtonAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFiltroActionPerformed(evt);
-            }
-        });
-
-        jButtonFiltrar.setText("Filtrar");
-        jButtonFiltrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonFiltrarActionPerformed(evt);
-            }
-        });
-
-        jButtonSelecionar.setText("Selecionar");
-        jButtonSelecionar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSelecionarActionPerformed(evt);
+                jButtonAdicionarActionPerformed(evt);
             }
         });
 
@@ -108,68 +85,159 @@ public class JFrameConsultaProduto extends javax.swing.JFrame {
             }
         });
 
-        jButtonAdicionar.setText("Adicionar");
-        jButtonAdicionar.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSelecionar.setText("Selecionar");
+        jButtonSelecionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAdicionarActionPerformed(evt);
+                jButtonSelecionarActionPerformed(evt);
             }
         });
+
+        jButtonFiltrar.setText("Filtrar");
+        jButtonFiltrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFiltrarActionPerformed(evt);
+            }
+        });
+
+        jLabelFiltro.setText("Filtro:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
                         .addComponent(jLabelFiltro)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextFieldFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonSelecionar)
+                        .addComponent(jButtonFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                        .addComponent(jButtonSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(17, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                        .addComponent(jButtonAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelFiltro)
-                        .addComponent(jTextFieldFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonFiltrar))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonAdicionar)
-                        .addComponent(jButtonAlterar)
-                        .addComponent(jButtonSelecionar)))
-                .addGap(26, 26, 26))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelFiltro)
+                    .addComponent(jTextFieldFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonFiltrar)
+                    .addComponent(jButtonSelecionar)
+                    .addComponent(jButtonAlterar)
+                    .addComponent(jButtonAdicionar))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        // TODO add your handling code here:
-    }//GEN-LAST:event_formWindowClosing
+    private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
+        System.out.println("Adicionar");
 
-    private void jTextFieldFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFiltroActionPerformed
+        try {
+
+            JFrameProdutoCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameProdutoCRUD( null, false );
+
+            jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter(){
+                @Override
+                public void windowClosed(java.awt.event.WindowEvent evt) {
+                    System.out.println("Atualizar");
+                    try {
+                        result.setQuery( query );
+                    } catch ( Exception ex ) {
+                        ex.printStackTrace();
+                    }
+                }
+            } );
+
+            jFrameCRUD.setVisible( true );
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }//GEN-LAST:event_jButtonAdicionarActionPerformed
+
+    private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFiltroActionPerformed
+
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
+
+            System.out.println("Alterar");
+
+            int id = (int) result.getValueAt( row, 0 );
+
+            Produto produto = new Produto();
+            produto.setIdProduto(id);
+
+            try {
+
+                produto.load();
+
+                JFrameProdutoCRUD jFrameCRUD;
+                jFrameCRUD = new JFrameProdutoCRUD( produto, false );
+
+                jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter(){
+                    @Override
+                    public void windowClosed(java.awt.event.WindowEvent evt) {
+                        System.out.println("Atualizar");
+                        try {
+                            result.setQuery( query );
+                        } catch ( Exception ex ) {
+                            ex.printStackTrace();
+                        }
+                    }
+                } );
+
+                jFrameCRUD.setVisible( true );
+
+            } catch( Exception ex ) {
+                ex.printStackTrace();
+            }
+
+        }
+
+    }//GEN-LAST:event_jButtonAlterarActionPerformed
+
+    private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
+        // TODO add your handling code here:
+
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
+
+            System.out.println("Selecionar");
+
+            int id = (int) result.getValueAt( row, 0 );
+
+            this.produto.setIdProduto(id);
+
+            try {
+                this.produto.load();
+                this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+            } catch( Exception ex ) {
+                LogTrack.getInstance().addException(ex, true, this);
+            }
+
+        }
+
+    }//GEN-LAST:event_jButtonSelecionarActionPerformed
 
     private void jButtonFiltrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFiltrarActionPerformed
+        // TODO add your handling code here:
         System.out.println("Filtrar");
 
         String filtro = jTextFieldFiltro.getText();
@@ -179,97 +247,6 @@ public class JFrameConsultaProduto extends javax.swing.JFrame {
             filter.setRowFilter( RowFilter.regexFilter( filtro ) );
         }
     }//GEN-LAST:event_jButtonFiltrarActionPerformed
-
-    private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
-        int row = jTableConsulta.getSelectedRow();
-        if( row != -1 ) {
-            
-            System.out.println("Selecionar");
-            
-            int codigo = (int) result.getValueAt( row, 0 );
-            
-            this.produto.setIdproduto(codigo);
-            
-            try {
-                this.produto.load();
-                this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
-            } catch( Exception ex ) {
-                LogTrack.getInstance().addException(ex, true, this);
-            }
-            
-        }
-        
-    }//GEN-LAST:event_jButtonSelecionarActionPerformed
-
-    private void jButtonAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlterarActionPerformed
-        
-        int row = jTableConsulta.getSelectedRow();
-        if( row != -1 ) {
-            
-            System.out.println("Alterar");
-            
-            int codigo = (int) result.getValueAt( row, 0 );
-            
-            Produto produto = new Produto();
-            produto.setIdproduto(codigo);
-            
-            try {
-                
-                produto.load();
-                
-                JFrameProdutoCRUD jFrameCRUD;
-                jFrameCRUD = new JFrameProdutoCRUD( produto, false );
-
-                jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter(){
-                        @Override
-                        public void windowClosed(java.awt.event.WindowEvent evt) {
-                             System.out.println("Atualizar");
-                             try {
-                                 result.setQuery( query );
-                             } catch ( Exception ex ) {
-                                 ex.printStackTrace();
-                             }
-                        }
-                    } );
-
-                jFrameCRUD.setVisible( true );
-                
-                
-            } catch( Exception ex ) {
-                ex.printStackTrace();
-            }            
-            
-        }
-        
-    }//GEN-LAST:event_jButtonAlterarActionPerformed
-
-    private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
-        System.out.println("Adicionar");
-        
-        try {
-        
-            JFrameProdutoCRUD jFrameCRUD;
-            jFrameCRUD = new JFrameProdutoCRUD( null, false );
-
-            jFrameCRUD.addWindowListener( new java.awt.event.WindowAdapter(){
-                    @Override
-                    public void windowClosed(java.awt.event.WindowEvent evt) {
-                         System.out.println("Atualizar");
-                         try {
-                             result.setQuery( query );
-                         } catch ( Exception ex ) {
-                             ex.printStackTrace();
-                         }
-                    }
-                } );
-
-            jFrameCRUD.setVisible( true );
-        
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        
-    }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
     /**
      * @param args the command line arguments
