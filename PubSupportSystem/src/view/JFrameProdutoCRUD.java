@@ -268,7 +268,7 @@ public class JFrameProdutoCRUD extends javax.swing.JFrame {
     }
 
     private void dataDown() throws Exception {
-        produto.setIdproduto(Integer.parseInt(jTextFieldProdutoID.getText()));
+        produto.setIdProduto(Integer.parseInt(jTextFieldProdutoID.getText()));
         produto.setNomeProduto(jTextFieldNomeProduto.getText());
         produto.setPreco(Double.parseDouble(jTextFieldPrecoProduto.getText()));
         produto.setDesconto(Double.parseDouble(jTextFieldDescontoProduto.getText()));

@@ -424,7 +424,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private void jMenuItemCadastroItemPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroItemPedidoActionPerformed
         try {
             JFrameItemPedidoCRUD jFrameCRUD;
-            jFrameCRUD = new JFrameItemPedidoCRUD( null, true );
+            jFrameCRUD = new JFrameItemPedidoCRUD( false, true, null );
             jFrameCRUD.setVisible(true);
         } catch( Exception ex ){
             ex.printStackTrace();
