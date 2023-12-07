@@ -1,5 +1,5 @@
 <config>        
 
-    <database url="jdbc:mysql://localhost/pssdb" user="" password=""/>
+    <database url="jdbc:mysql://localhost/pssdb" user="root" password="123321"/>
 
 </config>

@@ -17,7 +17,7 @@ public class JFrameConsultaItemPedido extends javax.swing.JFrame {
     private boolean select;
     private boolean disconnectOnClose;
     
-    private String query = "SELECT item_pedido.id_produto AS ID, item_pedido.id_nota_fiscal AS NF, item_pedido.quantidade AS QUANTIDADE from item_pedido ORDER BY id_produto";
+    private String query = "SELECT * FROM item_pedido ORDER BY id_produto";
     
     private ResultSetTableModel result;
     private final TableRowSorter< TableModel > filter;
@@ -171,13 +171,13 @@ public class JFrameConsultaItemPedido extends javax.swing.JFrame {
             int id = (int) result.getValueAt(row, 0);
 
             ItemPedido itemPedido = new ItemPedido();
-            itemPedido.setIdProduto(id);
+            itemPedido.getProduto().setIdProduto(id);
 
             try {
                 itemPedido.load();
 
                 JFrameItemPedidoCRUD jFrameCRUD;
-                jFrameCRUD = new JFrameItemPedidoCRUD(itemPedido, false);
+                jFrameCRUD = new JFrameItemPedidoCRUD(false, false, itemPedido);
 
                 jFrameCRUD.addWindowListener(new java.awt.event.WindowAdapter(){
                     @Override
@@ -201,22 +201,28 @@ public class JFrameConsultaItemPedido extends javax.swing.JFrame {
     private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
         System.out.println("Adicionar");
 
-        JFrameItemPedidoCRUD jFrameCRUD;
-        jFrameCRUD = new JFrameItemPedidoCRUD(null, false);
+        try {
+            
+            JFrameItemPedidoCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameItemPedidoCRUD(true, false, itemPedido);
 
-        jFrameCRUD.addWindowListener(new java.awt.event.WindowAdapter(){
-            @Override
-            public void windowClosed(java.awt.event.WindowEvent evt){
-                System.out.println("Atualizar");
-                try {
-                    result.setQuery(query);
-                } catch (Exception ex){
-                    ex.printStackTrace();
+            jFrameCRUD.addWindowListener(new java.awt.event.WindowAdapter(){
+                @Override
+                public void windowClosed(java.awt.event.WindowEvent evt){
+                    System.out.println("Atualizar");
+                    try {
+                        result.setQuery(query);
+                    } catch (Exception ex){
+                        ex.printStackTrace();
+                    }
                 }
-            }
-        });
+            });
 
-        jFrameCRUD.setVisible(true);
+            jFrameCRUD.setVisible(true);
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
     private void jTextFieldFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFiltroActionPerformed

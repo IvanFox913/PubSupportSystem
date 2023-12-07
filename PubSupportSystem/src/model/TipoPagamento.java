@@ -24,21 +24,30 @@ public class TipoPagamento  extends DataAccessObject  {
     // SETTERS
 
     public void setIdTipoPagamento(int idTipoPagamento) {
-        this.idTipoPagamento = idTipoPagamento;
+        // verificar se o estado do objeto precisar alterar/modificar
+        if( this.idTipoPagamento !=  idTipoPagamento ) {
+            this.idTipoPagamento = idTipoPagamento;
+            // informar que um campo da tabela foi alterado
+            addChange("id_tipo_pagamento", this.idTipoPagamento);
+        }
     }
 
     public void setNomeTipoPagamento(String nomeTipoPagamento) {
-        this.nomeTipoPagamento = nomeTipoPagamento;
+        if( !nomeTipoPagamento.equals( this.nomeTipoPagamento ) ) {
+            this.nomeTipoPagamento = nomeTipoPagamento;
+            addChange("nome_tipo_pagamento", this.nomeTipoPagamento);
+        }
     }
 
     @Override
     protected String getWhereClauseForOneEntry() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return " id_tipo_pagamento = " + this.idTipoPagamento;
     }
 
     @Override
     protected void fill(ArrayList<Object> data) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.idTipoPagamento = (int) data.get(0);
+        this.nomeTipoPagamento = (String) data.get(1);
     }
     
     

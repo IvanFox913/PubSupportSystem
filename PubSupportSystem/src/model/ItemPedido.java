@@ -3,8 +3,8 @@ import controller.DataAccessObject;
 import java.util.ArrayList;
 
 public class ItemPedido  extends DataAccessObject {
-    private int idProduto; //FK Produto idProduto;
-    private int idNotaFiscal; //FK NotaFiscal idNotaFiscal;
+    private Produto produto; //FK Produto idProduto;
+    private NotaFiscal notaFiscal; //FK NotaFiscal idNotaFiscal;
     private int quantidade;
 
     public ItemPedido() {
@@ -13,12 +13,12 @@ public class ItemPedido  extends DataAccessObject {
 
     // GETTERS
     
-    public int getIdProduto() {
-        return idProduto;
+    public Produto getProduto() {
+        return produto;
     }
 
-    public int getIdNotaFiscal() {
-        return idNotaFiscal;
+    public NotaFiscal getNotaFiscal() {
+        return notaFiscal;
     }
 
     public int getQuantidade() {
@@ -27,43 +27,123 @@ public class ItemPedido  extends DataAccessObject {
 
     // SETTERS
     
-    public void setIdProduto(int idProduto) {
-        if( this.idProduto !=  idProduto ) {
-            this.idProduto = idProduto;
-            // informar que um campo da tabela foi alterado
-            addChange("id_produto", 
-                    this.idProduto);
+    public void setProduto(Produto produto) throws Exception {
+        
+        if( this.produto  == null ) {
+            
+            if( produto != null ) {
+                
+                this.produto = new Produto();
+                this.produto.setIdProduto(produto.getIdProduto());
+                this.produto.load();
+                addChange( "id_produto", this.produto.getIdProduto() );
+                
+            }
+            
+        } else {
+            
+            if( produto == null ) {
+                
+                this.produto = null;
+                addChange( "id_produto", null );
+                
+            } else {
+                
+                if( !this.produto.equals( produto ) ) {
+                    
+                    this.produto.setIdProduto(produto.getIdProduto() );
+                    this.produto.load();
+                    addChange( "id_produto", this.produto.getIdProduto() );
+                    
+                }
+                
+            }
         }
+        
     }
-
-    public void setIdNotaFiscal(int idNotaFiscal) {
-        if( this.idNotaFiscal !=  idNotaFiscal ) {
-            this.idNotaFiscal = idNotaFiscal;
-            // informar que um campo da tabela foi alterado
-            addChange("id_nota_fiscal", 
-                    this.idNotaFiscal);
+    
+    public void setNotaFiscal(NotaFiscal notaFiscal) throws Exception {
+        
+        if( this.notaFiscal  == null ) {
+            
+            if( notaFiscal != null ) {
+                
+                this.notaFiscal = new NotaFiscal();
+                this.notaFiscal.setIdNotaFiscal(notaFiscal.getIdNotaFiscal());
+                this.notaFiscal.load();
+                addChange( "id_nota_fiscal", this.notaFiscal.getIdNotaFiscal() );
+                
+            }
+            
+        } else {
+            
+            if( notaFiscal == null ) {
+                
+                this.notaFiscal = null;
+                addChange( "id_notaFiscal", null );
+                
+            } else {
+                
+                if( !this.notaFiscal.equals( notaFiscal ) ) {
+                    
+                    this.notaFiscal.setIdNotaFiscal(notaFiscal.getIdNotaFiscal() );
+                    this.notaFiscal.load();
+                    addChange( "id_notaFiscal", this.notaFiscal.getIdNotaFiscal() );
+                    
+                }
+                
+            }
         }
+        
     }
 
     public void setQuantidade(int quantidade) {
-        if( this.quantidade !=  quantidade ) {
+        if( quantidade != this.quantidade ) {
             this.quantidade = quantidade;
-            // informar que um campo da tabela foi alterado
-            addChange("quantidade", 
-                    this.quantidade);
+            addChange("quantidade", this.quantidade);
         }
     }
 
     @Override
     protected String getWhereClauseForOneEntry() {
-        return " id_produto = " + this.idProduto;
+        String clause;
+        
+        if(produto == null){
+            clause = " id_produto = NULL";
+        } else {
+            clause = " id_produto = '" + produto.getIdProduto();
+        }
+        
+        if(notaFiscal == null) {
+            clause += " AND id_nota_fiscal = NULL";
+        } else {
+            clause += " AND id_nota_fiscal = " + notaFiscal.getIdNotaFiscal();
+        }
+        
+        return clause;
     }
 
     @Override
     protected void fill(ArrayList<Object> data) throws Exception {
-        this.idProduto = (int) data.get(0);
-        this.idNotaFiscal = (int) data.get(1);
-        this.quantidade = (int) data.get(2);        
+        if(data.get(0) != null) {
+            if(produto == null){
+                produto = new Produto();
+            }
+            
+            produto.setIdProduto((int) data.get(0));
+            produto.load();
+        }
+        
+        if(data.get(1) != null) {
+            if(notaFiscal == null){
+                notaFiscal = new NotaFiscal();
+            }
+            
+            notaFiscal.setIdNotaFiscal((int) data.get(1));
+            notaFiscal.load();
+        }
+        
+        this.quantidade = (int) data.get(3);
     }
       
 }

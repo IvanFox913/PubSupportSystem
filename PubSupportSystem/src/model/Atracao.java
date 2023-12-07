@@ -34,16 +34,14 @@ public class Atracao extends DataAccessObject {
         if( this.idAtracao !=  idAtracao ) {
             this.idAtracao = idAtracao;
             // informar que um campo da tabela foi alterado
-            addChange("id_atracao", 
-                    this.idAtracao);
+            addChange("id_atracao", this.idAtracao);
         }
     }
 
     public void setDescricao(String descricao) {
         if( !descricao.equals( this.descricao ) ) {
             this.descricao = descricao;
-             addChange("descricao", 
-                    this.descricao);
+            addChange("descricao", this.descricao);
         }
     }
 

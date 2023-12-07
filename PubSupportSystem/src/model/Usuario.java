@@ -176,6 +176,8 @@ public class Usuario extends DataAccessObject{
         telefone = (String) data.get(6);
         devedor = (String) data.get(7);
         
+        devedor = (String) data.get(7);
+        
         if(data.get(8) != null){
             if(tipoUsuario == null){
                 tipoUsuario = new TipoUsuario();

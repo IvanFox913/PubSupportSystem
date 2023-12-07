@@ -40,20 +40,17 @@ public class Produto  extends DataAccessObject  {
     
     // SETTERS
 
-    public void setIdproduto(int idProduto) {
-        if( idProduto !=  this.idProduto ) {
+    public void setIdProduto(int idProduto) {
+        if( idProduto != this.idProduto ) {
             this.idProduto = idProduto;
-            // informar que um campo da tabela foi alterado
-            addChange("id_produto", 
-                    this.idProduto);
+            addChange("id_produto", this.idProduto);
         }
     }
 
     public void setNomeProduto(String nomeProduto) {
         if( !nomeProduto.equals( this.nomeProduto ) ) {
             this.nomeProduto = nomeProduto;
-             addChange("nome_produto", 
-                    this.nomeProduto);
+            addChange("nome_produto", this.nomeProduto);
         }
     }
 
