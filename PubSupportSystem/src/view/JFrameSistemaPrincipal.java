@@ -75,12 +75,12 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelDelicia = new javax.swing.JLabel();
         jPanelMenu = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabelBemvindo = new javax.swing.JLabel();
+        jLabelDelicia = new javax.swing.JLabel();
         jPanelLogin = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelSenha = new javax.swing.JLabel();
@@ -119,30 +119,34 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         setTitle("Sistema - La Delicia");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelDelicia.setFont(new java.awt.Font("Zilla Slab", 3, 48)); // NOI18N
-        jLabelDelicia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/titulo.png"))); // NOI18N
-        jLabelDelicia.setText("La Delicia");
-        jLabelDelicia.setFocusable(false);
-        jLabelDelicia.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        getContentPane().add(jLabelDelicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 370, 90));
-
         jPanelMenu.setBackground(new java.awt.Color(102, 102, 102));
 
-        jButton1.setText("Pratos");
+        jButton1.setText("Nova Comanda");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Não sei");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("jButton3");
+        jButton3.setText("Também não sei");
 
         jLabelBemvindo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelBemvindo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBemvindo.setText("Bem-vindo!");
         jLabelBemvindo.setEnabled(false);
+
+        jLabelDelicia.setFont(new java.awt.Font("Zilla Slab", 3, 14)); // NOI18N
+        jLabelDelicia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/titulo.png"))); // NOI18N
+        jLabelDelicia.setText("Nome ngc");
+        jLabelDelicia.setFocusable(false);
+        jLabelDelicia.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
         jPanelMenu.setLayout(jPanelMenuLayout);
@@ -151,22 +155,30 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanelMenuLayout.createSequentialGroup()
                 .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelMenuLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)))
-                    .addGroup(jPanelMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabelBemvindo)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                        .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelMenuLayout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)))
+                            .addGroup(jPanelMenuLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabelBemvindo)))
+                        .addGap(0, 30, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMenuLayout.createSequentialGroup()
+                        .addGap(0, 6, Short.MAX_VALUE)
+                        .addComponent(jLabelDelicia, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanelMenuLayout.setVerticalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelBemvindo)
-                .addGap(204, 204, 204)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelDelicia)
+                .addGap(102, 102, 102)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -606,6 +618,10 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private void jMenuItemConsultaProdutos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaProdutos1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemConsultaProdutos1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
     
