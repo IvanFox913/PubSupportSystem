@@ -9,19 +9,21 @@ import javax.swing.RowFilter;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import model.Produto;
+import model.Usuario;
 
 public class JFrameConsultaProduto extends javax.swing.JFrame {
 
+    private Usuario cliente;
     private Produto produto;
     private boolean select;
     private boolean disconnectOnClose;
     
-    private String query = "SELECT * FROM produto ORDER BY produto_nome;";
+    private String query = "SELECT produto.id_produto as ID, produto.nome_produto as Produto, produto.preco as Preço, produto.desconto as Desconto, tipo_produto.nome_tipo as Categoria FROM produto JOIN tipo_produto ON produto.id_tipo_produto = tipo_produto.id_tipo_produto;";
     
     private ResultSetTableModel result;
     private final TableRowSorter<TableModel> filter;
     
-    public JFrameConsultaProduto(boolean select, boolean disconnectOnClose, Produto produto) throws SQLException {
+    public JFrameConsultaProduto(boolean select, boolean disconnectOnClose, Produto produto, Usuario cliente) throws SQLException {
         initComponents();
         
         this.produto = produto;
@@ -29,6 +31,16 @@ public class JFrameConsultaProduto extends javax.swing.JFrame {
         jButtonSelecionar.setEnabled(this.select);
         
         this.disconnectOnClose = disconnectOnClose;
+        
+        //restições
+        this.cliente = cliente;
+        if( this.cliente != null ) {
+            jButtonAdicionar.setEnabled(false);
+            jButtonAlterar.setEnabled(false);
+        }
+
+        
+        
         
         result = new ResultSetTableModel( query );
         jTableConsulta.setModel( result );
@@ -279,7 +291,7 @@ public class JFrameConsultaProduto extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new JFrameConsultaProduto( false, true, null ).setVisible(true);
+                    new JFrameConsultaProduto( false, true, null, null ).setVisible(true);
                 } catch ( Exception ex ) {
                     ex.printStackTrace();
                 }

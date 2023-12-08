@@ -316,13 +316,13 @@ public class JFrameItemPedidoCRUD extends javax.swing.JFrame {
             }
 
             JFrameConsultaProduto jFrameConsulta;
-            jFrameConsulta = new JFrameConsultaProduto( true, false, produto );
+            jFrameConsulta = new JFrameConsultaProduto( true, false, produto, null );
 
             jFrameConsulta.addWindowListener( new java.awt.event.WindowAdapter(){
                 @Override
                 public void windowClosed(java.awt.event.WindowEvent evt) {
-                    if( produto.getNomeProduto() != null ) {
-                        jTextFieldProduto.setText( produto.getNomeProduto() );
+                    if( produto != null ) {
+                        jTextFieldProduto.setText(String.valueOf(produto.getIdProduto()));//( produto.getIdProduto() ); (String.valueOf(notaFiscal.getIdNotaFiscal()));
                     }
                 }
             } );

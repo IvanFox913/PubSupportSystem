@@ -48,6 +48,8 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jButtonSelecionar" min="-2" pref="101" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonAlterar" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonAdicionar" min="-2" pref="100" max="-2" attributes="0"/>
@@ -82,6 +84,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtonAdicionar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSelecionar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="17" max="32767" attributes="0"/>
           </Group>
@@ -169,6 +172,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAdicionarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSelecionar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Selecionar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSelecionarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

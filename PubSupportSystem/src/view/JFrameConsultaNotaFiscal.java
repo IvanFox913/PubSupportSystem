@@ -2,6 +2,7 @@ package view;
 
 import controller.LogTrack;
 import controller.ResultSetTableModel;
+import java.awt.event.WindowEvent;
 import java.sql.SQLException;
 import model.NotaFiscal;
 import model.Usuario;
@@ -23,6 +24,10 @@ public class JFrameConsultaNotaFiscal extends javax.swing.JFrame {
     public JFrameConsultaNotaFiscal(boolean select, boolean disconnectOnClose, NotaFiscal notaFiscal) throws SQLException{
         initComponents();
         
+        this.notaFiscal = notaFiscal;
+        this.select = select;
+        jButtonSelecionar.setEnabled(this.select);        
+
         this.disconnectOnClose = disconnectOnClose;
         
         this.usuario = usuario;
@@ -66,6 +71,7 @@ public class JFrameConsultaNotaFiscal extends javax.swing.JFrame {
         jTableConsulta = new javax.swing.JTable();
         jButtonAlterar = new javax.swing.JButton();
         jButtonAdicionar = new javax.swing.JButton();
+        jButtonSelecionar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Consulta Nota Fiscal");
@@ -129,6 +135,13 @@ public class JFrameConsultaNotaFiscal extends javax.swing.JFrame {
             }
         });
 
+        jButtonSelecionar.setText("Selecionar");
+        jButtonSelecionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSelecionarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -153,6 +166,8 @@ public class JFrameConsultaNotaFiscal extends javax.swing.JFrame {
                         .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButtonSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButtonAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -178,7 +193,8 @@ public class JFrameConsultaNotaFiscal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAlterar)
-                    .addComponent(jButtonAdicionar))
+                    .addComponent(jButtonAdicionar)
+                    .addComponent(jButtonSelecionar))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -323,6 +339,26 @@ public class JFrameConsultaNotaFiscal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowClosing
 
+    private void jButtonSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSelecionarActionPerformed
+        int row = jTableConsulta.getSelectedRow();
+        if( row != -1 ) {
+
+            System.out.println("Selecionar");
+
+            int codigo = (int) result.getValueAt( row, 0 );
+
+            this.notaFiscal.setIdNotaFiscal(codigo);
+
+            try {
+                this.notaFiscal.load();
+                this.dispatchEvent( new WindowEvent( this, WindowEvent.WINDOW_CLOSING ) );
+            } catch( Exception ex ) {
+                ex.printStackTrace();
+            }
+
+        }
+    }//GEN-LAST:event_jButtonSelecionarActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -382,6 +418,7 @@ public class JFrameConsultaNotaFiscal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonAlterar;
     private javax.swing.JButton jButtonApagarUsuario;
     private javax.swing.JButton jButtonBuscar;
+    private javax.swing.JButton jButtonSelecionar;
     private javax.swing.JButton jButtonSelecionarUsuario;
     private javax.swing.JLabel jLabelData;
     private javax.swing.JLabel jLabelPaciente;

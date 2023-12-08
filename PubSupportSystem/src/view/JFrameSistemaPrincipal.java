@@ -5,35 +5,40 @@ import controller.LogTrack;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.swing.Timer;
+import java.sql.SQLException;
 import model.Usuario;
 import view.JFrameAtracaoCRUD;
-import view.JFrameAtracaoCRUD;
-import view.JFrameConsultaAtracao;
 import view.JFrameConsultaAtracao;
 import view.JFrameConsultaItemPedido;
-import view.JFrameConsultaItemPedido;
-import view.JFrameItemPedidoCRUD;
 import view.JFrameItemPedidoCRUD;
 
+
 public class JFrameSistemaPrincipal extends javax.swing.JFrame {
+    
     private Usuario usuario;
     
-    /**
-     * Creates new form JFrameSistema
-     */
-    public JFrameSistemaPrincipal() {
-        initComponents();
+     //* Creates new form JFrameSistema *//
+    public JFrameSistemaPrincipal() throws SQLException {
+        initComponents();  
+        
         logout();
+        
     }
     
     private void logout() {
         
         usuario = new Usuario();
+        
+        jLabelBemvindo.setVisible(false);
+        
         jTextFieldUsuario.setText("");
         jPasswordFieldSenha.setText("");
+        jPanelLogin.setEnabled(true);
+        jTextFieldUsuario.setEnabled(true);//.setText("");
+        jPasswordFieldSenha.setEnabled(true);
+        jButtonLogin.setEnabled(true);
+        jTabbedPanel.setSelectedIndex(0);
+        
         jLabelDelicia.setVisible(false);
         jMenuAdministrativo.setEnabled(false);
         jMenuAtendimento.setEnabled(false);
@@ -44,14 +49,17 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     
     private void login() {
         
-       
-        jTextFieldUsuario.setText("");
-        jPasswordFieldSenha.setText("");
-        jLabelBemvindo.setEnabled(true);
+        jPanelLogin.setEnabled(false);
+        jTextFieldUsuario.setEnabled(false);//.setText("");
+        jPasswordFieldSenha.setEnabled(false);
+        jButtonLogin.setEnabled(false);
+        jTabbedPanel.setSelectedIndex(1);
+        
+        //jLabelBemvindo.setEnabled(true);
+        jLabelBemvindo.setVisible(true);
         jLabelBemvindo.setText("Bem-vindo/a, " + usuario.getNome() + "!");
         jLabelDelicia.setVisible(true);
                 
-        jPanelLogin.setVisible(false);
         
         if( usuario.getTipoUsuario().getModuloAdministrativo().equals("S") ) {
             jMenuAdministrativo.setEnabled(true);
@@ -75,12 +83,10 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelMenu = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabelBemvindo = new javax.swing.JLabel();
         jLabelDelicia = new javax.swing.JLabel();
+        jPanelMenu = new javax.swing.JPanel();
+        jLabelBemvindo = new javax.swing.JLabel();
+        jTabbedPanel = new javax.swing.JTabbedPane();
         jPanelLogin = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelSenha = new javax.swing.JLabel();
@@ -90,6 +96,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jLabelIniciarSessao = new javax.swing.JLabel();
         jButtonLogin = new javax.swing.JButton();
         jButtonSair = new javax.swing.JButton();
+        jPanelAreaUsuario = new javax.swing.JPanel();
         jMenuBarActions = new javax.swing.JMenuBar();
         jMenuAdministrativo = new javax.swing.JMenu();
         jMenuItemCadastroUsuario = new javax.swing.JMenuItem();
@@ -98,7 +105,9 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jMenuItemCadastroAtracao = new javax.swing.JMenuItem();
         jMenuItemCadastroTipoProduto = new javax.swing.JMenuItem();
         jMenuItemCadastroProduto = new javax.swing.JMenuItem();
+        jMenuItemCadastroNF = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItemConsultaNF = new javax.swing.JMenuItem();
         jMenuItemConsultaUsuario = new javax.swing.JMenuItem();
         jMenuItemConsultaTipoUsuario = new javax.swing.JMenuItem();
         jMenuItemConsultaItemPedido = new javax.swing.JMenuItem();
@@ -106,99 +115,65 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jMenuItemConsultaTipoProduto = new javax.swing.JMenuItem();
         jMenuItemConsultaProdutos = new javax.swing.JMenuItem();
         jMenuAtendimento = new javax.swing.JMenu();
-        jMenuItemConsultaUsuario1 = new javax.swing.JMenuItem();
-        jMenuItemConsultaTipoUsuario1 = new javax.swing.JMenuItem();
-        jMenuItemConsultaItemPedido1 = new javax.swing.JMenuItem();
-        jMenuItemConsultaTipoProduto1 = new javax.swing.JMenuItem();
-        jMenuItemConsultaAtracao1 = new javax.swing.JMenuItem();
-        jMenuItemConsultaProdutos1 = new javax.swing.JMenuItem();
+        jMenuItemConsultaCliente = new javax.swing.JMenuItem();
+        jMenuItemPedidosConsultaNFCliente = new javax.swing.JMenuItem();
+        jMenuItemConsultaItemPedidoCliente = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenuItemNovoCliente = new javax.swing.JMenuItem();
+        jMenuItemCrearNF = new javax.swing.JMenuItem();
+        jMenuItemCrearItemPedido = new javax.swing.JMenuItem();
         jMenuUsuario = new javax.swing.JMenu();
+        jMenuItemConsultaNFCliente = new javax.swing.JMenuItem();
         jMenuItemUsuarioSair = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItemConsultaMenu = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema - La Delicia");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabelDelicia.setFont(new java.awt.Font("Zilla Slab", 3, 48)); // NOI18N
+        jLabelDelicia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/titulo.png"))); // NOI18N
+        jLabelDelicia.setText("La Delicia");
+        jLabelDelicia.setFocusable(false);
+        jLabelDelicia.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        getContentPane().add(jLabelDelicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 370, 90));
+
         jPanelMenu.setBackground(new java.awt.Color(102, 102, 102));
-
-        jButton1.setText("Nova Comanda");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Não sei");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Também não sei");
 
         jLabelBemvindo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelBemvindo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBemvindo.setText("Bem-vindo!");
-        jLabelBemvindo.setEnabled(false);
-
-        jLabelDelicia.setFont(new java.awt.Font("Zilla Slab", 3, 14)); // NOI18N
-        jLabelDelicia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/titulo.png"))); // NOI18N
-        jLabelDelicia.setText("Nome ngc");
-        jLabelDelicia.setFocusable(false);
-        jLabelDelicia.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
         jPanelMenu.setLayout(jPanelMenuLayout);
         jPanelMenuLayout.setHorizontalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuLayout.createSequentialGroup()
-                .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelMenuLayout.createSequentialGroup()
-                        .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelMenuLayout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)))
-                            .addGroup(jPanelMenuLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabelBemvindo)))
-                        .addGap(0, 30, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMenuLayout.createSequentialGroup()
-                        .addGap(0, 6, Short.MAX_VALUE)
-                        .addComponent(jLabelDelicia, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(14, 14, 14)
+                .addComponent(jLabelBemvindo)
+                .addContainerGap(155, Short.MAX_VALUE))
         );
         jPanelMenuLayout.setVerticalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addComponent(jLabelBemvindo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelDelicia)
-                .addGap(102, 102, 102)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(294, Short.MAX_VALUE))
+                .addContainerGap(586, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 680));
+        getContentPane().add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 620));
 
         jPanelLogin.setBackground(new java.awt.Color(153, 153, 153));
         jPanelLogin.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelUsuario.setText("Usuário:");
-        jPanelLogin.add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        jPanelLogin.add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
 
         jLabelSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelSenha.setText("Senha:");
-        jPanelLogin.add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+        jPanelLogin.add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
 
         jTextFieldUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldUsuario.setBorder(null);
@@ -207,11 +182,11 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
                 jTextFieldUsuarioActionPerformed(evt);
             }
         });
-        jPanelLogin.add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 250, 35));
+        jPanelLogin.add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 250, 35));
 
         jPasswordFieldSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPasswordFieldSenha.setBorder(null);
-        jPanelLogin.add(jPasswordFieldSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 250, 35));
+        jPanelLogin.add(jPasswordFieldSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 250, 35));
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -225,14 +200,16 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabelIniciarSessao, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jLabelIniciarSessao, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 210, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabelIniciarSessao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
         );
 
-        jPanelLogin.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 110));
+        jPanelLogin.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 110));
 
         jButtonLogin.setBackground(new java.awt.Color(0, 0, 0));
         jButtonLogin.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
@@ -244,7 +221,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
                 jButtonLoginActionPerformed(evt);
             }
         });
-        jPanelLogin.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 250, 35));
+        jPanelLogin.add(jButtonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 250, 35));
 
         jButtonSair.setBackground(new java.awt.Color(204, 0, 0));
         jButtonSair.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
@@ -255,9 +232,24 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
                 jButtonSairActionPerformed(evt);
             }
         });
-        jPanelLogin.add(jButtonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 250, 35));
+        jPanelLogin.add(jButtonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 250, 35));
 
-        getContentPane().add(jPanelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 310, 410));
+        jTabbedPanel.addTab("Login", jPanelLogin);
+
+        javax.swing.GroupLayout jPanelAreaUsuarioLayout = new javax.swing.GroupLayout(jPanelAreaUsuario);
+        jPanelAreaUsuario.setLayout(jPanelAreaUsuarioLayout);
+        jPanelAreaUsuarioLayout.setHorizontalGroup(
+            jPanelAreaUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 550, Short.MAX_VALUE)
+        );
+        jPanelAreaUsuarioLayout.setVerticalGroup(
+            jPanelAreaUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 465, Short.MAX_VALUE)
+        );
+
+        jTabbedPanel.addTab("Area do Usuario", jPanelAreaUsuario);
+
+        getContentPane().add(jTabbedPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 550, 500));
 
         jMenuAdministrativo.setText("Administrativo");
 
@@ -308,7 +300,23 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuAdministrativo.add(jMenuItemCadastroProduto);
+
+        jMenuItemCadastroNF.setText("Cadastro Nota Fiscal");
+        jMenuItemCadastroNF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadastroNFActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemCadastroNF);
         jMenuAdministrativo.add(jSeparator1);
+
+        jMenuItemConsultaNF.setText("Consulta Nota Fiscal");
+        jMenuItemConsultaNF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaNFActionPerformed(evt);
+            }
+        });
+        jMenuAdministrativo.add(jMenuItemConsultaNF);
 
         jMenuItemConsultaUsuario.setText("Consulta Usuario");
         jMenuItemConsultaUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -360,59 +368,63 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
 
         jMenuBarActions.add(jMenuAdministrativo);
 
-        jMenuAtendimento.setText("Atendimento");
+        jMenuAtendimento.setText("Pedidos");
 
-        jMenuItemConsultaUsuario1.setText("Consulta Usuario");
-        jMenuItemConsultaUsuario1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemConsultaCliente.setText("Consulta Cliente");
+        jMenuItemConsultaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemConsultaUsuario1ActionPerformed(evt);
+                jMenuItemConsultaClienteActionPerformed(evt);
             }
         });
-        jMenuAtendimento.add(jMenuItemConsultaUsuario1);
+        jMenuAtendimento.add(jMenuItemConsultaCliente);
 
-        jMenuItemConsultaTipoUsuario1.setText("Consulta Tipo Usuario");
-        jMenuItemConsultaTipoUsuario1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemPedidosConsultaNFCliente.setText("Consulta Nota Fiscal");
+        jMenuAtendimento.add(jMenuItemPedidosConsultaNFCliente);
+
+        jMenuItemConsultaItemPedidoCliente.setText("Consulta Item Pedido");
+        jMenuItemConsultaItemPedidoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemConsultaTipoUsuario1ActionPerformed(evt);
+                jMenuItemConsultaItemPedidoClienteActionPerformed(evt);
             }
         });
-        jMenuAtendimento.add(jMenuItemConsultaTipoUsuario1);
+        jMenuAtendimento.add(jMenuItemConsultaItemPedidoCliente);
+        jMenuAtendimento.add(jSeparator2);
 
-        jMenuItemConsultaItemPedido1.setText("Consulta Item Pedido");
-        jMenuItemConsultaItemPedido1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemNovoCliente.setText("Novo Cliente");
+        jMenuItemNovoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemConsultaItemPedido1ActionPerformed(evt);
+                jMenuItemNovoClienteActionPerformed(evt);
             }
         });
-        jMenuAtendimento.add(jMenuItemConsultaItemPedido1);
+        jMenuAtendimento.add(jMenuItemNovoCliente);
 
-        jMenuItemConsultaTipoProduto1.setText("Consulta Tipo Produto");
-        jMenuItemConsultaTipoProduto1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCrearNF.setText("Crear/Alterar Nota Fiscal");
+        jMenuItemCrearNF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemConsultaTipoProduto1ActionPerformed(evt);
+                jMenuItemCrearNFActionPerformed(evt);
             }
         });
-        jMenuAtendimento.add(jMenuItemConsultaTipoProduto1);
+        jMenuAtendimento.add(jMenuItemCrearNF);
 
-        jMenuItemConsultaAtracao1.setText("Consulta Atração");
-        jMenuItemConsultaAtracao1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCrearItemPedido.setText("Crear/Alterar Item Pedido");
+        jMenuItemCrearItemPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemConsultaAtracao1ActionPerformed(evt);
+                jMenuItemCrearItemPedidoActionPerformed(evt);
             }
         });
-        jMenuAtendimento.add(jMenuItemConsultaAtracao1);
-
-        jMenuItemConsultaProdutos1.setText("Consulta Produto");
-        jMenuItemConsultaProdutos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemConsultaProdutos1ActionPerformed(evt);
-            }
-        });
-        jMenuAtendimento.add(jMenuItemConsultaProdutos1);
+        jMenuAtendimento.add(jMenuItemCrearItemPedido);
 
         jMenuBarActions.add(jMenuAtendimento);
 
-        jMenuUsuario.setText("Usuario");
+        jMenuUsuario.setText("Cliente");
+
+        jMenuItemConsultaNFCliente.setText("Ver Nota Fiscal");
+        jMenuItemConsultaNFCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaNFClienteActionPerformed(evt);
+            }
+        });
+        jMenuUsuario.add(jMenuItemConsultaNFCliente);
 
         jMenuItemUsuarioSair.setText("Sair");
         jMenuItemUsuarioSair.addActionListener(new java.awt.event.ActionListener() {
@@ -424,14 +436,23 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
 
         jMenuBarActions.add(jMenuUsuario);
 
+        jMenu1.setText("Menu");
+
+        jMenuItemConsultaMenu.setText("Consulta Produto");
+        jMenuItemConsultaMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaMenuActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemConsultaMenu);
+
+        jMenuBarActions.add(jMenu1);
+
         setJMenuBar(jMenuBarActions);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItemCadastroItemPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroItemPedidoActionPerformed
         try {
@@ -439,7 +460,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameCRUD = new JFrameItemPedidoCRUD( false, true, null );
             jFrameCRUD.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemCadastroItemPedidoActionPerformed
 
@@ -449,7 +470,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameConsulta = new JFrameConsultaItemPedido( false, true, null );
             jFrameConsulta.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemConsultaItemPedidoActionPerformed
 
@@ -459,7 +480,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameCRUD = new JFrameAtracaoCRUD( null, true );
             jFrameCRUD.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemCadastroAtracaoActionPerformed
 
@@ -469,7 +490,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameConsulta = new JFrameConsultaAtracao( false, true, null );
             jFrameConsulta.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemConsultaAtracaoActionPerformed
 
@@ -479,7 +500,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameCRUD = new JFrameUsuarioCRUD( null, true );
             jFrameCRUD.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemCadastroUsuarioActionPerformed
 
@@ -489,7 +510,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameCRUD = new JFrameTipoProdutoCRUD( null, true );
             jFrameCRUD.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemCadastroTipoProdutoActionPerformed
 
@@ -499,7 +520,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameConsulta = new JFrameConsultaUsuario( false, true, null );
             jFrameConsulta.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemConsultaUsuarioActionPerformed
 
@@ -509,7 +530,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameCRUD = new JFrameTipoUsuarioCRUD( null, true );
             jFrameCRUD.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemCadastroTipoUsuarioActionPerformed
 
@@ -519,7 +540,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameConsulta = new JFrameConsultaTipoUsuario( false, true, null );
             jFrameConsulta.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemConsultaTipoUsuarioActionPerformed
 
@@ -533,7 +554,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameConsulta = new JFrameConsultaTipoProduto( false, true, null );
             jFrameConsulta.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemConsultaTipoProdutoActionPerformed
 
@@ -543,17 +564,17 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             jFrameCRUD = new JFrameProdutoCRUD( null, true );
             jFrameCRUD.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemCadastroProdutoActionPerformed
 
     private void jMenuItemConsultaProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaProdutosActionPerformed
         try {
             JFrameConsultaProduto jFrameConsulta;
-            jFrameConsulta = new JFrameConsultaProduto( false, true, null );
+            jFrameConsulta = new JFrameConsultaProduto( false, true, null, null );
             jFrameConsulta.setVisible(true);
         } catch( Exception ex ){
-            ex.printStackTrace();
+            LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemConsultaProdutosActionPerformed
 
@@ -578,10 +599,9 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             if( usuario.getSenha().equals( usLogin.getSenha() ) ) {
                 login();
                 usuario.disconnectFromDatabase();
-            } else {
-                jTextFieldUsuario.setText("");
-                jPasswordFieldSenha.setText("");  
-                throw new Exception("Senha Inválida!");              
+            } else { 
+                logout();
+                throw new Exception("Senha Inválida!"); 
             }
             
         
@@ -595,35 +615,91 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButtonSairActionPerformed
 
-    private void jMenuItemConsultaUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaUsuario1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemConsultaUsuario1ActionPerformed
+    private void jMenuItemConsultaNFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaNFActionPerformed
+        try {
+            JFrameConsultaNotaFiscal jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaNotaFiscal( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemConsultaNFActionPerformed
 
-    private void jMenuItemConsultaTipoUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaTipoUsuario1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemConsultaTipoUsuario1ActionPerformed
+    private void jMenuItemCadastroNFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroNFActionPerformed
+        try {
+            JFrameNotaFiscalCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameNotaFiscalCRUD( null, true );
+            jFrameCRUD.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemCadastroNFActionPerformed
 
-    private void jMenuItemConsultaItemPedido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaItemPedido1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemConsultaItemPedido1ActionPerformed
+    private void jMenuItemConsultaItemPedidoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaItemPedidoClienteActionPerformed
+        try {
+            JFrameConsultaItemPedido jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaItemPedido( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemConsultaItemPedidoClienteActionPerformed
 
-    private void jMenuItemConsultaTipoProduto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaTipoProduto1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemConsultaTipoProduto1ActionPerformed
+    private void jMenuItemNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNovoClienteActionPerformed
+        try {
+            JFrameUsuarioCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameUsuarioCRUD( null, true );
+            jFrameCRUD.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemNovoClienteActionPerformed
 
-    private void jMenuItemConsultaAtracao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaAtracao1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemConsultaAtracao1ActionPerformed
+    private void jMenuItemConsultaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaClienteActionPerformed
 
-    private void jMenuItemConsultaProdutos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaProdutos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemConsultaProdutos1ActionPerformed
+    }//GEN-LAST:event_jMenuItemConsultaClienteActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void jMenuItemConsultaNFClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaNFClienteActionPerformed
+        try {
+            JFrameConsultaNotaFiscal jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaNotaFiscal( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemConsultaNFClienteActionPerformed
 
-    
+    private void jMenuItemCrearNFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearNFActionPerformed
+        try {
+            JFrameNotaFiscalCRUD jFrameCRUD;
+            jFrameCRUD = new JFrameNotaFiscalCRUD( null, true );
+            jFrameCRUD.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemCrearNFActionPerformed
+
+    private void jMenuItemCrearItemPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearItemPedidoActionPerformed
+        try {
+            JFrameConsultaItemPedido jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaItemPedido( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemCrearItemPedidoActionPerformed
+
+    private void jMenuItemConsultaMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaMenuActionPerformed
+        try {
+            JFrameConsultaProduto jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaProduto( false, true, null, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemConsultaMenuActionPerformed
+
+
     
     /**
      * @param args the command line arguments
@@ -655,7 +731,12 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFrameSistemaPrincipal().setVisible(true);
+                try {
+                    new JFrameSistemaPrincipal().setVisible(true);
+                } catch (SQLException ex) {
+                    //Logger.getLogger(JFrameSistemaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                    ex.printStackTrace();
+                }
             }
         });
         //</editor-fold>
@@ -669,9 +750,6 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonLogin;
     private javax.swing.JButton jButtonSair;
     private javax.swing.JLabel jLabelBemvindo;
@@ -679,34 +757,42 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelIniciarSessao;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenuAdministrativo;
     private javax.swing.JMenu jMenuAtendimento;
     private javax.swing.JMenuBar jMenuBarActions;
     private javax.swing.JMenuItem jMenuItemCadastroAtracao;
     private javax.swing.JMenuItem jMenuItemCadastroItemPedido;
+    private javax.swing.JMenuItem jMenuItemCadastroNF;
     private javax.swing.JMenuItem jMenuItemCadastroProduto;
     private javax.swing.JMenuItem jMenuItemCadastroTipoProduto;
     private javax.swing.JMenuItem jMenuItemCadastroTipoUsuario;
     private javax.swing.JMenuItem jMenuItemCadastroUsuario;
     private javax.swing.JMenuItem jMenuItemConsultaAtracao;
-    private javax.swing.JMenuItem jMenuItemConsultaAtracao1;
+    private javax.swing.JMenuItem jMenuItemConsultaCliente;
     private javax.swing.JMenuItem jMenuItemConsultaItemPedido;
-    private javax.swing.JMenuItem jMenuItemConsultaItemPedido1;
+    private javax.swing.JMenuItem jMenuItemConsultaItemPedidoCliente;
+    private javax.swing.JMenuItem jMenuItemConsultaMenu;
+    private javax.swing.JMenuItem jMenuItemConsultaNF;
+    private javax.swing.JMenuItem jMenuItemConsultaNFCliente;
     private javax.swing.JMenuItem jMenuItemConsultaProdutos;
-    private javax.swing.JMenuItem jMenuItemConsultaProdutos1;
     private javax.swing.JMenuItem jMenuItemConsultaTipoProduto;
-    private javax.swing.JMenuItem jMenuItemConsultaTipoProduto1;
     private javax.swing.JMenuItem jMenuItemConsultaTipoUsuario;
-    private javax.swing.JMenuItem jMenuItemConsultaTipoUsuario1;
     private javax.swing.JMenuItem jMenuItemConsultaUsuario;
-    private javax.swing.JMenuItem jMenuItemConsultaUsuario1;
+    private javax.swing.JMenuItem jMenuItemCrearItemPedido;
+    private javax.swing.JMenuItem jMenuItemCrearNF;
+    private javax.swing.JMenuItem jMenuItemNovoCliente;
+    private javax.swing.JMenuItem jMenuItemPedidosConsultaNFCliente;
     private javax.swing.JMenuItem jMenuItemUsuarioSair;
     private javax.swing.JMenu jMenuUsuario;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanelAreaUsuario;
     private javax.swing.JPanel jPanelLogin;
     private javax.swing.JPanel jPanelMenu;
     private javax.swing.JPasswordField jPasswordFieldSenha;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JTabbedPane jTabbedPanel;
     private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }
