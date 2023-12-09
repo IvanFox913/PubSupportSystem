@@ -97,6 +97,8 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jButtonLogin = new javax.swing.JButton();
         jButtonSair = new javax.swing.JButton();
         jPanelAreaUsuario = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jMenuBarActions = new javax.swing.JMenuBar();
         jMenuAdministrativo = new javax.swing.JMenu();
         jMenuItemCadastroUsuario = new javax.swing.JMenuItem();
@@ -116,7 +118,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         jMenuItemConsultaProdutos = new javax.swing.JMenuItem();
         jMenuAtendimento = new javax.swing.JMenu();
         jMenuItemConsultaCliente = new javax.swing.JMenuItem();
-        jMenuItemPedidosConsultaNFCliente = new javax.swing.JMenuItem();
+        jMenuItemAtendenteConsultaNFCliente = new javax.swing.JMenuItem();
         jMenuItemConsultaItemPedidoCliente = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         jMenuItemNovoCliente = new javax.swing.JMenuItem();
@@ -236,15 +238,34 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
 
         jTabbedPanel.addTab("Login", jPanelLogin);
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout jPanelAreaUsuarioLayout = new javax.swing.GroupLayout(jPanelAreaUsuario);
         jPanelAreaUsuario.setLayout(jPanelAreaUsuarioLayout);
         jPanelAreaUsuarioLayout.setHorizontalGroup(
             jPanelAreaUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
+            .addGroup(jPanelAreaUsuarioLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         jPanelAreaUsuarioLayout.setVerticalGroup(
             jPanelAreaUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 465, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAreaUsuarioLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         jTabbedPanel.addTab("Area do Usuario", jPanelAreaUsuario);
@@ -378,8 +399,13 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
         });
         jMenuAtendimento.add(jMenuItemConsultaCliente);
 
-        jMenuItemPedidosConsultaNFCliente.setText("Consulta Nota Fiscal");
-        jMenuAtendimento.add(jMenuItemPedidosConsultaNFCliente);
+        jMenuItemAtendenteConsultaNFCliente.setText("Consulta Nota Fiscal");
+        jMenuItemAtendenteConsultaNFCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAtendenteConsultaNFClienteActionPerformed(evt);
+            }
+        });
+        jMenuAtendimento.add(jMenuItemAtendenteConsultaNFCliente);
 
         jMenuItemConsultaItemPedidoCliente.setText("Consulta Item Pedido");
         jMenuItemConsultaItemPedidoCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -656,7 +682,13 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemNovoClienteActionPerformed
 
     private void jMenuItemConsultaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaClienteActionPerformed
-
+        try {
+            JFrameConsultaUsuario jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaUsuario( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
     }//GEN-LAST:event_jMenuItemConsultaClienteActionPerformed
 
     private void jMenuItemConsultaNFClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaNFClienteActionPerformed
@@ -698,6 +730,16 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
             LogTrack.getInstance().addException( ex, true, this );
         }
     }//GEN-LAST:event_jMenuItemConsultaMenuActionPerformed
+
+    private void jMenuItemAtendenteConsultaNFClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAtendenteConsultaNFClienteActionPerformed
+        try {
+            JFrameConsultaNotaFiscal jFrameConsulta;
+            jFrameConsulta = new JFrameConsultaNotaFiscal( false, true, null );
+            jFrameConsulta.setVisible(true);
+        } catch( Exception ex ){
+            LogTrack.getInstance().addException( ex, true, this );
+        }
+    }//GEN-LAST:event_jMenuItemAtendenteConsultaNFClienteActionPerformed
 
 
     
@@ -761,6 +803,7 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuAdministrativo;
     private javax.swing.JMenu jMenuAtendimento;
     private javax.swing.JMenuBar jMenuBarActions;
+    private javax.swing.JMenuItem jMenuItemAtendenteConsultaNFCliente;
     private javax.swing.JMenuItem jMenuItemCadastroAtracao;
     private javax.swing.JMenuItem jMenuItemCadastroItemPedido;
     private javax.swing.JMenuItem jMenuItemCadastroNF;
@@ -782,7 +825,6 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemCrearItemPedido;
     private javax.swing.JMenuItem jMenuItemCrearNF;
     private javax.swing.JMenuItem jMenuItemNovoCliente;
-    private javax.swing.JMenuItem jMenuItemPedidosConsultaNFCliente;
     private javax.swing.JMenuItem jMenuItemUsuarioSair;
     private javax.swing.JMenu jMenuUsuario;
     private javax.swing.JPanel jPanel4;
@@ -790,9 +832,11 @@ public class JFrameSistemaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelLogin;
     private javax.swing.JPanel jPanelMenu;
     private javax.swing.JPasswordField jPasswordFieldSenha;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPanel;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }
